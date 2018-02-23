@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html>
+
+<div class="sheet-type-character sheet-flex">
+    
+	<!-- LEFT COLUMN -->
+	<div class="sheet-col50 sheet-flex-wrap">
+		<!-- Character Info Text Fields -->
+	   	<div class="sheet-col100 sheet-flex-wrap">
+	   	    <div class="sheet-vigor-logo">
+	   	        <img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Vigor-Char-Sheet-Logo-01.png">
+	   	    </div>
+		    <div class="sheet-col45 sheet-title-text">
+	           <span data-i18n="character">Character</span>
+	        </div>
+	        <div class="sheet-section-divider sheet-col100 sheet-flex">
+	        </div>
+	        
+			<div class="sheet-section-margin sheet-col100 sheet-header">
+				<input type="text" name="attr_character_name"/>
+				<span data-i18n="name">Name:</span>
+			</div>
+			<div class="sheet-col100 sheet-header">
+				<input type="text" name="attr_firstimpressions"/>
+				<span data-i18n="first_impressions">First Impressions:</span>
+			</div>
+			<div class="sheet-col100 sheet-header">
+				<input type="text" name="attr_characterarc"/>
+				<span data-i18n="character_arc">Character Arc:</span>
+			</div>
+			<div class="sheet-col100 sheet-header">
+				<input type="text" name="attr_tragicflaw"/>
+				<span data-i18n="tragic_flaw">Tragic Flaw:</span>
+			</div>
+			<div class="sheet-col100 sheet-header">
+				<input type="text" name="attr_redeemingnature"/>
+				<span data-i18n="redeeming_nature">Redeeming Nature:</span>
+			</div>
+		</div>
+		<div class="sheet-bottom-margin sheet-section-divider sheet-col100 sheet-flex"></div>
+		
+	<!-- BOTTOM LEFT SECTION-->
+	<div class="sheet-col100 sheet-grey-background sheet-flex-wrap">
+		<!-- Narratives Section -->
+		<div class="sheet-col100 sheet-flex-wrap sheet-section-margin">
+		    <div class="sheet-col45 sheet-title-text">
+	        <span data-i18n="narratives">Narratives</span>
+	        </div>
+	        <div class="sheet-narr-xp-bar">
+	            <div class="sheet-xp-align">
+					<input type="radio" value="0" name="attr_narr_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_narr_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_narr_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_narr_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+				</div>
+			</div>
+	         <div class="sheet-col100 sheet-xp-desc">
+	            <span data-i18n="narr_xp_desc">spend toward vigor advance, or fill to continue your journey</span>
+	        </div>
+	        <div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_major_narrative"/>
+				<span data-i18n="major">Major (2XP):</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_subplot_narrative1"/>
+				<span data-i18n="subplot">Subplot (1XP):</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_subplot_narrative2"/>
+				<span data-i18n="subplot">Subplot (1XP):</span>
+			</div>
+		</div>
+		
+		<!-- Flaws Section -->
+		<div class="sheet-section-margin sheet-col100 sheet-flex-wrap">
+		    <div class="sheet-col30 sheet-title-text">
+	        <span data-i18n="flaws">Flaws</span>
+	        </div>
+	        <div class="sheet-col70 sheet-flaw-xp-bar">
+	            <div class="sheet-xp-align">
+					<input type="radio" value="0" name="attr_flaw_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_flaw_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_flaw_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_flaw_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_flaw_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+				</div>
+	        </div>
+	        <div class="sheet-col100 sheet-xp-desc">
+	            <span data-i18n="flaw_xp_desc">spend toward quality advance, or fill to continue your journey</span>
+	        </div>
+	        <div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_flaw1"/>
+				<span data-i18n="flaw_1">1.)</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_flaw2"/>
+				<span data-i18n="flaw_2">2.)</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_flaw3"/>
+				<span data-i18n="flaw_3">3.)</span>
+			</div>
+	        
+		</div>
+		<!-- Natures Section -->
+		<div class="sheet-section-margin sheet-col100 sheet-flex-wrap">
+		    <div class="sheet-col40 sheet-title-text">
+	        <span data-i18n="natures">Natures</span>
+	        </div>
+	         <div class="sheet-col60 sheet-nat-xp-bar">
+	             <div class="sheet-xp-align">
+	                <input type="radio" value="0" name="attr_nature_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_nature_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_nature_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_nature_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_nature_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_nature_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+				</div>
+	         </div>
+	        <div class="sheet-col100 sheet-xp-desc">
+	            <span data-i18n="nat_xp_desc">spend to regain vigor, or fill to continue your journey</span>
+	        </div>
+	        <div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_nature1"/>
+				<span data-i18n="nat_1">1.)</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_nature2"/>
+				<span data-i18n="nat_2">2.)</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_nature3"/>
+				<span data-i18n="nat_3">3.)</span>
+			</div>
+		</div>
+		<!-- TIES SECTION -->
+		<div class="sheet-section-margin sheet-col100 sheet-flex-wrap">
+		    <div class="sheet-col30 sheet-title-text">
+	        <span data-i18n="ties">Ties</span>
+	        </div>
+	        <div class="sheet-col70 sheet-flaw-xp-bar">
+	            <div class="sheet-xp-align">
+					<input type="radio" value="0" name="attr_ties_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_ties_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_ties_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_ties_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_ties_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+				</div>
+	        </div>
+	        <div class="sheet-col100 sheet-xp-desc">
+	            <span data-i18n="ties_xp_desc">spend to heal wounds, or fill to continue your journey</span>
+	        </div>
+	        <div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_tie1"/>
+				<span data-i18n="flaw_1">1.)</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_tie2"/>
+				<span data-i18n="flaw_2">2.)</span>
+			</div>
+			<div class="sheet-col100 sheet-header sheet-small-indent">
+				<input type="text" name="attr_tie3"/>
+				<span data-i18n="flaw_3">3.)</span>
+			</div>
+	        
+		</div>
+		<!-- Journeys Section -->
+        <div class="sheet-section-margin sheet-col100 sheet-flex-wrap">
+		    <div class="sheet-col45 sheet-title-text">
+	        <span data-i18n="journey">Journey</span>
+	        </div>
+	        <!--JOURNEY STEPS TABLE-->
+            <div class="sheet-small-indent sheet-bottom-margin sheet-journey-table">
+                <table>
+                    <th class="sheet-journey-table" data-i18n="description">Description</th>
+                    <th class="sheet-journey-table" data-i18n="type">Type</th>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey1_desc" placeholder="DESCRIPTION">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey1_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey2_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey2_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey3_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey3_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey4_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey4_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey5_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey5_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey6_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey6_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey7_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey7_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey8_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey8_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey9_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey9_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_journey10_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <div class="sheet-col100 sheet-flex sheet-header">
+	                        <select class="sheet-journey-type-menu" name="attr_journey10_type">
+                            <option value="–">–</option>
+                            <option value="Brawler">BRL</option>
+                            <option value="Dreamer">DRM</option>
+                            <option value="Emissary">EMS</option>
+                            <option value="Outrider">OTR</option>
+                            <option value="Shadow">SHD</option>
+                            <option value="Valiant">VAL</option>
+                            </select>
+                           </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+	        
+		</div>
+	</div> <!-- END GREY BACKGROUND -->
+	</div> <!-- END LEFT COLUMN -->
+	
+	<!-- RIGHT COLUMN -->
+	<div class="sheet-right-column sheet-col50 sheet-flex-wrap">
+	    <!-- Vigor Section -->
+	    <div class="sheet-col100 sheet-title-text">
+	        <span data-i18n="vigor">Vigor</span>
+	    </div> 
+	    <div class="sheet-vigor sheet-section-divider sheet-col100 sheet-flex-wrap">
+	            <input type="checkbox" name="attr_vigor_xp" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_vigor_xp" class="sheet-hidden" value="1"/>
+				<input type="checkbox" name="attr_vigor_xp" class="sheet-hidden" value="2"/>
+				<input type="checkbox" name="attr_vigor_xp" class="sheet-hidden" value="3"/>
+				<input type="checkbox" name="attr_vigor_xp" class="sheet-hidden" value="4"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_vigor_xp" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-vigor sheet-vigor-xp sheet-4clock">
+					<input type="radio" name="attr_vigor_xp" value="1"/>
+					<input type="radio" name="attr_vigor_xp" value="2"/>
+					<input type="radio" name="attr_vigor_xp" value="3"/>
+					<input type="radio" name="attr_vigor_xp" value="4"/>
+				</div>
+	        
+	    </div> 
+	    <div class="sheet-bottom-margin sheet-col100 sheet-flex">
+	        <table class="sheet-vigor-table">
+                <tr>
+                <td><input type="number" name="attr_vigor_risked"/> </td>
+                <td><input type="number" name="attr_vigor_current"/></td>
+                <td><input type="number" name="attr_vigor_max"/></td>
+                </tr>
+                <tr>
+                <td><span data-i18n="risked">risked</span></th>
+                <td><span data-i18n="current">current</span></th>
+                 <td><span data-i18n="max">max</span></th>
+                </tr>
+                </table>
+	    </div>
+	    <div class="sheet-col100 sheet-section-divider sheet-section-margin"></div>
+	    <!-- WOUNDS SECTION -->
+	     <div class="sheet-col100 sheet-grey-background sheet-flex-wrap">
+	         <div class= "sheet-section-margin sheet-col100 sheet-title-text">
+	             <span data-i18n="wounds">Wounds</span>
+	         </div>
+	         
+	         <!--MINOR WOUNDS -->
+	         <div class="sheet-bottom-margin sheet-minor-wounds sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	            <div class="sheet-col30 sheet-flex">
+	            <span class="sheet-wound-labels" data-i18n="minor">Minor</span>
+	            <span class="sheet-subtitle-text" data-i18n="minor_+_-">+1V/-1Advg</span>
+	            </div>
+	            <!--FIRST MINOR WOUND-->
+	            <div class="sheet-flex-wrap">
+	                <input type="checkbox" name="attr_minor_wounds_1" class="sheet-hidden" value="0" checked/>
+				    <input type="checkbox" name="attr_minor_wounds_1" class="sheet-hidden" value="1"/>
+				    <input type="checkbox" name="attr_minor_wounds_1" class="sheet-hidden" value="2"/>
+				    <input type="checkbox" name="attr_minor_wounds_1" class="sheet-hidden" value="3"/>
+				    <input type="checkbox" name="attr_minor_wounds_1" class="sheet-hidden" value="4"/>
+				    <div class="sheet-zeroholder">
+					    <input type="radio" value="0" name="attr_minor_wounds_1" class="sheet-zero" checked/>
+					    <span></span>
+				    </div>
+				    <div class="sheet-minor-wounds sheet-minor-wounds-holder sheet-wound-4clock">
+					    <input type="radio" name="attr_minor_wounds_1" value="1"/>
+					    <input type="radio" name="attr_minor_wounds_1" value="2"/>
+					    <input type="radio" name="attr_minor_wounds_1" value="3"/>
+					    <input type="radio" name="attr_minor_wounds_1" value="4"/>
+				    </div>
+				</div>
+	             <!--SECOND MINOR WOUND-->
+	             <div class="sheet-flex-wrap">
+	            <input type="checkbox" name="attr_minor_wounds_2" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_minor_wounds_2" class="sheet-hidden" value="1"/>
+				<input type="checkbox" name="attr_minor_wounds_2" class="sheet-hidden" value="2"/>
+				<input type="checkbox" name="attr_minor_wounds_2" class="sheet-hidden" value="3"/>
+				<input type="checkbox" name="attr_minor_wounds_2" class="sheet-hidden" value="4"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_minor_wounds_2" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-minor-wounds sheet-minor-wounds-holder sheet-wound-4clock">
+					<input type="radio" name="attr_minor_wounds_2" value="1"/>
+					<input type="radio" name="attr_minor_wounds_2" value="2"/>
+					<input type="radio" name="attr_minor_wounds_2" value="3"/>
+					<input type="radio" name="attr_minor_wounds_2" value="4"/>
+				</div>
+				</div>
+				 <!--THIRD MINOR WOUND-->
+				 <div class="sheet-flex-wrap">
+	            <input type="checkbox" name="attr_minor_wounds_3" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_minor_wounds_3" class="sheet-hidden" value="1"/>
+				<input type="checkbox" name="attr_minor_wounds_3" class="sheet-hidden" value="2"/>
+				<input type="checkbox" name="attr_minor_wounds_3" class="sheet-hidden" value="3"/>
+				<input type="checkbox" name="attr_minor_wounds_3" class="sheet-hidden" value="4"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_minor_wounds_3" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-minor-wounds sheet-minor-wounds-holder sheet-wound-4clock">
+					<input type="radio" name="attr_minor_wounds_3" value="1"/>
+					<input type="radio" name="attr_minor_wounds_3" value="2"/>
+					<input type="radio" name="attr_minor_wounds_3" value="3"/>
+					<input type="radio" name="attr_minor_wounds_3" value="4"/>
+				</div>
+				</div>
+				</div>
+	            <!--WOUND NOTES -->
+	            <div class="sheet-section-margin sheet-small-indent sheet-col100 sheet-header">
+				<input type="text" name="attr_wound_minor_notes"/>
+				<span data-i18n="notes">Notes:</span>
+		    	</div>
+	        
+	        <!--DEBILITATING WOUNDS -->
+	         <div class="sheet-deb-wounds sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	            <div class="sheet-col30 sheet-flex">
+	            <span class="sheet-wound-labels" data-i18n="debilitating">Debilitating</span>
+	            <span class="sheet-subtitle-text" data-i18n="debilitating_+_-">+2V/-1d</span>
+	            </div>
+	            <!--FIRST DEBILITATING WOUND-->
+	            <div class="sheet-flex-wrap">
+	                <input type="checkbox" name="attr_deb_wounds_1" class="sheet-hidden" value="0" checked/>
+				    <input type="checkbox" name="attr_deb_wounds_1" class="sheet-hidden" value="1"/>
+				    <input type="checkbox" name="attr_deb_wounds_1" class="sheet-hidden" value="2"/>
+				    <div class="sheet-zeroholder">
+					    <input type="radio" value="0" name="attr_deb_wounds_1" class="sheet-zero" checked/>
+					    <span></span>
+				    </div>
+				    <div class="sheet-deb-wounds sheet-deb-wounds-holder sheet-wound-2clock">
+					    <input type="radio" name="attr_deb_wounds_1" value="1"/>
+					    <input type="radio" name="attr_deb_wounds_1" value="2"/>
+				    </div>
+				</div>
+	             <!--SECOND DEBILITATING WOUND-->
+	             <div class="sheet-flex-wrap">
+	            <input type="checkbox" name="attr_deb_wounds_2" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_deb_wounds_2" class="sheet-hidden" value="1"/>
+				<input type="checkbox" name="attr_deb_wounds_2" class="sheet-hidden" value="2"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_deb_wounds_2" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-deb-wounds sheet-deb-wounds-holder sheet-wound-2clock">
+					<input type="radio" name="attr_deb_wounds_2" value="1"/>
+					<input type="radio" name="attr_deb_wounds_2" value="2"/>
+				</div>
+				</div>
+				 <!--THIRD DEBILITATING WOUND-->
+				 <div class="sheet-flex-wrap">
+	            <input type="checkbox" name="attr_deb_wounds_3" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_deb_wounds_3" class="sheet-hidden" value="1"/>
+				<input type="checkbox" name="attr_deb_wounds_3" class="sheet-hidden" value="2"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_deb_wounds_3" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-deb-wounds sheet-deb-wounds-holder sheet-wound-2clock">
+					<input type="radio" name="attr_deb_wounds_3" value="1"/>
+					<input type="radio" name="attr_deb_wounds_3" value="2"/>
+				</div>
+				</div>
+				</div>
+	            <!--WOUND NOTES -->
+	            <div class="sheet-section-margin sheet-small-indent sheet-col100 sheet-header">
+				<input type="text" name="attr_wound_deb_notes"/>
+				<span data-i18n="notes">Notes:</span>
+		    	</div>
+	        
+	        <!--CRITICAL WOUNDS -->
+	         <div class="sheet-crit-wounds sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	            <div class="sheet-col30 sheet-flex">
+	            <span class="sheet-wound-labels" data-i18n="critical">Critical</span>
+	            <span class="sheet-subtitle-text" data-i18n="critical_+_-">+5V/-3d</span>
+	            </div>
+	            <!--FIRST CRITICAL WOUND-->
+	            <!--HIDE FIRST ROW CRITICAL WOUND-->
+	            <div class="sheet-hide-wound sheet-flex-wrap">
+	                <div class="sheet-crit-wounds sheet-crit-wounds-holder sheet-wound-1clock">
+	                </div>
+	            </div>
+	            
+	            
+	            <!--DISPLAY FIRST ROW CRITICAL WOUND-->
+	            <!--<div class="sheet-flex-wrap">
+	                <input type="checkbox" name="attr_crit_wounds_1" class="sheet-hidden" value="0" checked/>
+				    <input type="checkbox" name="attr_crit_wounds_1" class="sheet-hidden" value="1"/>
+				    <div class="sheet-zeroholder">
+					    <input type="radio" value="0" name="attr_crit_wounds_1" class="sheet-zero" checked/>
+					    <span></span>
+				    </div>
+				    <div class="sheet-crit-wounds sheet-crit-wounds-holder sheet-wound-1clock">
+					    <input type="radio" name="attr_crit_wounds_1" value="1"/>
+				    </div>
+				</div>-->
+	             <!--SECOND CRITICAL WOUND-->
+	             <div class="sheet-flex-wrap">
+	            <input type="checkbox" name="attr_crit_wounds_2" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_crit_wounds_2" class="sheet-hidden" value="1"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_crit_wounds_2" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-crit-wounds sheet-crit-wounds-holder sheet-wound-1clock">
+					<input type="radio" name="attr_crit_wounds_2" value="1"/>
+				</div>
+				</div>
+				 <!--THIRD CRITICAL WOUND-->
+				 <div class="sheet-flex-wrap">
+	            <input type="checkbox" name="attr_crit_wounds_3" class="sheet-hidden" value="0" checked/>
+				<input type="checkbox" name="attr_crit_wounds_3" class="sheet-hidden" value="1"/>
+				<div class="sheet-zeroholder">
+					<input type="radio" value="0" name="attr_crit_wounds_3" class="sheet-zero" checked/>
+					<span></span>
+				</div>
+				<div class="sheet-crit-wounds sheet-crit-wounds-holder sheet-wound-1clock">
+					<input type="radio" name="attr_crit_wounds_3" value="1"/>
+				</div>
+				</div>
+				</div>
+	            <!--WOUND NOTES -->
+	            <div class="sheet-section-margin sheet-small-indent sheet-col100 sheet-header">
+				<input type="text" name="attr_wound_crit_notes"/>
+				<span data-i18n="notes">Notes:</span>
+		    	</div>
+	        
+	        <!-- QUALITIES SECTION -->
+	     <div class="sheet-section-margin sheet-section-divider sheet-col100 sheet-flex-wrap">
+	    </div>
+	    <div class="sheet-section-margin sheet-col100 sheet-title-text">
+	        <span data-i18n="qualities">Qualities</span>
+	    </div>
+	    <!-- Agility -->
+	     <div class="sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	         <div class="sheet-col37 sheet-quality-header">
+	         <button type="roll" name="roll_agility" class="sheet-rollbutton sheet-quality-button" value='&{template:vigor1}{{name=@{character_name}}}{{quality=agility}}{{vigor_spent=?{Vigor|0}}}{{asset_qual=?{Asset Quality|0|1|2|3|4|5|6}}}{{notes=?{Notes|}}}{{qual_rating=[[(@{agility1}+@{agility2}+@{agility3}+@{agility4}+@{agility5}+@{agility6}+@{agility7}+@{agility8}+@{agility9}+@{agility10})]]}}{{dice=[[{(?{Vigor|0}+?{Asset Quality|0|1|2|3|4|5|6}+@{agility1}+@{agility2}+@{agility3}+@{agility4}+@{agility5}+@{agility6}+@{agility7}+@{agility8}+@{agility9}+@{agility10})d6!}>4]]}}' data-i18n="agility" data-i18n-title="agility_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons">agility</button> 
+	         </div>
+	         <!-- XP -->
+	         <div class="sheet-col63 sheet-qual-xp-align">
+	                <input type="radio" value="0" name="attr_agility_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="6" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="7" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="8" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="9" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="10" name="attr_agility_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+	    </div>
+	    
+	         <!-- RATING -->
+					<div class="sheet-col100">
+					    <div class="sheet-ratings-holder sheet-xp-align">
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_agility1"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_agility2"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_agility3"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_agility4"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_agility5"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_agility6"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_agility7"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_agility8"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_agility9"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_agility10"/>
+							<span></span>
+						</div>
+					
+			    	</div>
+					
+	    
+	    <!-- Brawn -->
+	     <div class="sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	         <div class="sheet-col37 sheet-quality-header">
+	         <button type="roll" name="roll_brawn" class="sheet-rollbutton sheet-quality-button" value='&{template:vigor1}{{name=@{character_name}}}{{quality=brawn}}{{vigor_spent=?{Vigor|0}}}{{asset_qual=?{Asset Quality|0|1|2|3|4|5|6}}}{{notes=?{Notes|}}}{{qual_rating=[[(@{brawn1}+@{brawn2}+@{brawn3}+@{brawn4}+@{brawn5}+@{brawn6}+@{brawn7}+@{brawn8}+@{brawn9}+@{brawn10})]]}}{{dice=[[{(?{Vigor|0}+?{Asset Quality|0|1|2|3|4|5|6}+@{brawn1}+@{brawn2}+@{brawn3}+@{brawn4}+@{brawn5}+@{brawn6}+@{brawn7}+@{brawn8}+@{brawn9}+@{brawn10})d6!}>4]]}}' data-i18n="brawn" data-i18n-title="brawn_description" title="Physical strength and toughness, Leveraging your frame to your advantage, Melee & Unarmed combat, imposing yourself upon a situation">brawn</button> 
+	         </div>
+	         <div class="sheet-col63 sheet-quality-header sheet-qual-xp-align">
+	                <input type="radio" value="0" name="attr_brawn_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="6" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="7" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="8" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="9" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="10" name="attr_brawn_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+				</div>
+					<!-- RATING -->
+					<div class="sheet-col100">
+					    <div class="sheet-ratings-holder sheet-xp-align">
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_brawn1"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_brawn2"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_brawn3"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_brawn4"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_brawn5"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_brawn6"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_brawn7"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_brawn8"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_brawn9"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_brawn10"/>
+							<span></span>
+						</div>
+					
+			    
+	         
+	         </div>
+	         <!-- Guile -->
+	     <div class="sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	         <div class="sheet-col37 sheet-quality-header">
+	         <button type="roll" name="roll_guile" class="sheet-rollbutton sheet-quality-button" value='&{template:vigor1}{{name=@{character_name}}}{{quality=guile}}{{vigor_spent=?{Vigor|0}}}{{asset_qual=?{Asset Quality|0|1|2|3|4|5|6}}}{{notes=?{Notes|}}}{{qual_rating=[[(@{guile1}+@{guile2}+@{guile3}+@{guile4}+@{guile5}+@{guile6}+@{guile7}+@{guile8}+@{guile9}+@{guile10})]]}}{{dice=[[{(?{Vigor|0}+?{Asset Quality|0|1|2|3|4|5|6}+@{guile1}+@{guile2}+@{guile3}+@{guile4}+@{guile5}+@{guile6}+@{guile7}+@{guile8}+@{guile9}+@{guile10})d6!}>4]]}}' data-i18n="guile" data-i18n-title="guile_description" title="Wits and cleverness. Sneakthievery, resourcefulness. Outsmarting or deceiving someone, or resisting being deceived">guile</button> 
+	         </div>
+	         <div class="sheet-col63 sheet-quality-header sheet-qual-xp-align">
+	                <input type="radio" value="0" name="attr_guile_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="6" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="7" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="8" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="9" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="10" name="attr_guile_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+			</div>		
+					<!-- RATING -->
+					<div class="sheet-col100">
+					    <div class="sheet-ratings-holder sheet-xp-align">
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_guile1"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_guile2"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_guile3"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_guile4"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_guile5"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_guile6"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_guile7"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_guile8"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_guile9"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_guile10"/>
+							<span></span>
+						</div>
+					
+			    	
+	         
+	    </div>
+	    
+	    <!-- Presence -->
+	     <div class="sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	         <div class="sheet-col37 sheet-quality-header">
+	         <button type="roll" name="roll_presence" class="sheet-rollbutton sheet-quality-button" value='&{template:vigor1}{{name=@{character_name}}}{{quality=presence}}{{vigor_spent=?{Vigor|0}}}{{asset_qual=?{Asset Quality|0|1|2|3|4|5|6}}}{{notes=?{Notes|}}}{{qual_rating=[[(@{presence1}+@{presence2}+@{presence3}+@{presence4}+@{presence5}+@{presence6}+@{presence7}+@{presence8}+@{presence9}+@{presence10})]]}}{{dice=[[{(?{Vigor|0}+?{Asset Quality|0|1|2|3|4|5|6}+@{presence1}+@{presence2}+@{presence3}+@{presence4}+@{presence5}+@{presence6}+@{presence7}+@{presence8}+@{presence9}+@{presence10})d6!}>4]]}}' data-i18n="presence" data-i18n-title="presence_description" title="Leveraging your personality in a situation. Interacting and Empathizing with others. Drawing attention to yourself. Leading, intimidating, and commanding others">presence</button> 
+	         </div>
+	         <div class="sheet-col63 sheet-quality-header sheet-qual-xp-align">
+	                <input type="radio" value="0" name="attr_presence_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="6" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="7" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="8" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="9" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="10" name="attr_presence_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+			</div>		
+						<!-- RATING -->
+					<div class="sheet-col100">
+					    <div class="sheet-ratings-holder sheet-xp-align">
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_presence1"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_presence2"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_presence3"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_presence4"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_presence5"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_presence6"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_presence7"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_presence8"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_presence9"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_presence10"/>
+							<span></span>
+						</div>
+					
+			   
+	         </div>
+	    
+	    
+	    <!-- Understanding -->
+	     <div class="sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	         <div class="sheet-col37 sheet-quality-header">
+	         <button type="roll" name="roll_understanding" class="sheet-rollbutton sheet-quality-button" value='&{template:vigor1}{{name=@{character_name}}}{{quality=understanding}}{{vigor_spent=?{Vigor|0}}}{{asset_qual=?{Asset Quality|0|1|2|3|4|5|6}}}{{notes=?{Notes|}}}{{qual_rating=[[(@{understanding1}+@{understanding2}+@{understanding3}+@{understanding4}+@{understanding5}+@{understanding6}+@{understanding7}+@{understanding8}+@{understanding9}+@{understanding10})]]}}{{dice=[[{(?{Vigor|0}+?{Asset Quality|0|1|2|3|4|5|6}+@{understanding1}+@{understanding2}+@{understanding3}+@{understanding4}+@{understanding5}+@{understanding6}+@{understanding7}+@{understanding8}+@{understanding9}+@{understanding10})d6!}>4]]}}' data-i18n="understanding" data-i18n-title="understanding_description" title="Synthesizing and Interpreting information. Appraising a person, creature, object or situation. Knowing the proper course of action.">understanding</button> 
+	         </div>
+	         <div class="sheet-col63 sheet-quality-header sheet-qual-xp-align">
+	                <input type="radio" value="0" name="attr_understanding_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="6" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="7" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="8" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="9" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="10" name="attr_understanding_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+			</div>		
+						<!-- RATING -->
+					<div class="sheet-col100">
+					    <div class="sheet-ratings-holder sheet-xp-align">
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_understanding1"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_understanding2"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_understanding3"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_understanding4"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_understanding5"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_understanding6"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_understanding7"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_understanding8"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_understanding9"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_understanding10"/>
+							<span></span>
+						</div>
+					
+			    	
+	         </div>
+	    
+	    
+	    <!-- Vision -->
+	    <div class="sheet-qualities-bar sheet-col100 sheet-flex-wrap">
+	         <div class="sheet-col37 sheet-quality-header">
+	         <button type="roll" name="roll_vision" class="sheet-rollbutton sheet-quality-button" value='&{template:vigor1}{{name=@{character_name}}}{{quality=vision}}{{vigor_spent=?{Vigor|0}}}{{asset_qual=?{Asset Quality|0|1|2|3|4|5|6}}}{{notes=?{Notes|}}}{{qual_rating=[[(@{vision1}+@{vision2}+@{vision3}+@{vision4}+@{vision5}+@{vision6}+@{vision7}+@{vision8}+@{vision9}+@{vision10})]]}}{{dice=[[{(?{Vigor|0}+?{Asset Quality|0|1|2|3|4|5|6}+@{vision1}+@{vision2}+@{vision3}+@{vision4}+@{vision5}+@{vision6}+@{vision7}+@{vision8}+@{vision9}+@{vision10})d6!}>4]]}}' data-i18n="vision" data-i18n-title="vision_description" title="Ability to gather information through the physical senses and special intuition. Seeing more than meets the eye.">vision</button> 
+	         </div>
+	         <div class="sheet-col63 sheet-quality-header sheet-qual-xp-align">
+	                <input type="radio" value="0" name="attr_vision_xp" class="sheet-tri sheet-zero" checked/>
+					<span></span>
+					<input type="radio" value="1" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="2" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="3" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="4" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="5" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="6" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="7" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="8" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="9" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+					<input type="radio" value="10" name="attr_vision_xp" class="sheet-tri sheet-xptri"/>
+					<span></span>
+			</div>		
+						<!-- RATING -->
+					<div class="sheet-col100">
+					    <div class="sheet-ratings-holder sheet-xp-align">
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_vision1"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_vision2"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_vision3"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_vision4"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_vision5"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_vision6"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_vision7"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_vision8"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-up" value="1" name="attr_vision9"/>
+							<span></span>
+							<input type="checkbox" class="sheet-rating-tri sheet-rating-tri-down" value="1" name="attr_vision10"/>
+							<span></span>
+						</div>
+			    
+			    
+			    
+	         </div>
+	        <!--ASSETS SECTION-->
+        <div class="sheet-bottom-margin sheet-section-divider sheet-col100 sheet-flex-wrap"></div>
+            <div class="sheet-section-margin sheet-col100 sheet-title-text">
+            <span data-i18n="assets">Assets</span>
+            </div>
+            <!--OFFENSIVE-->
+            <div class="sheet-small-indent sheet-bottom-margin sheet-asset-table">
+                <table>
+                    <th class="sheet-asset-table" data-i18n="offensive">Offensive</th>
+                    <th class="sheet-asset-table" data-i18n="quality">Quality</th>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_off_asset1_desc" placeholder="DESCRIPTION">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset1_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset1_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset1_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset1_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_off_asset2_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset2_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset2_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset2_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset2_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_off_asset3_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset3_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset3_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset3_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset3_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_off_asset4_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset4_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset4_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_off_asset4_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_off_asset4_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--DEFENSIVE-->
+            <div class="sheet-small-indent sheet-bottom-margin sheet-asset-table">
+                <table>
+                    <th class="sheet-asset-table" data-i18n="defensive">Defensive</th>
+                    <th class="sheet-asset-table" data-i18n="quality">Quality</th>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_def_asset1_desc" placeholder="DESCRIPTION">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset1_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset1_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset1_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset1_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_def_asset2_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset2_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset2_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset2_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset2_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_def_asset3_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset3_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset3_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset3_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset3_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_def_asset4_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset4_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset4_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_def_asset4_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_def_asset4_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--STRANGE & WONDROUS-->
+            <div class="sheet-small-indent sheet-bottom-margin sheet-asset-table">
+                <table>
+                    <th class="sheet-asset-table" data-i18n="strange_wondrous">Strange & Wondrous</th>
+                    <th class="sheet-asset-table" data-i18n="quality">Quality</th>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_sw_asset1_desc" placeholder="DESCRIPTION">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_sw_asset1_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_sw_asset1_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_sw_asset1_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_sw_asset1_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_sw_asset2_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_sw_asset2_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_sw_asset2_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_sw_asset2_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_sw_asset2_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_sw_asset3_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_sw_asset3_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_sw_asset3_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_sw_asset3_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_sw_asset3_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--RESTORATIVE-->
+            <div class="sheet-small-indent sheet-bottom-margin sheet-asset-table">
+                <table>
+                    <th class="sheet-asset-table" data-i18n="restorative">Restorative</th>
+                    <th class="sheet-asset-table" data-i18n="quality">Quality</th>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_restore_asset1_desc" placeholder="DESCRIPTION">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset1_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset1_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset1_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset1_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_restore_asset2_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset2_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset2_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset2_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset2_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_restore_asset3_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset3_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset3_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset3_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset3_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_restore_asset4_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset4_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset4_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset4_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset4_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_restore_asset5_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset5_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset5_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_restore_asset5_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_restore_asset5_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--GOODS & RESOURCES-->
+            <div class="sheet-small-indent sheet-bottom-margin sheet-asset-table">
+                <table>
+                    <th class="sheet-asset-table" data-i18n="goods_resources">Goods & Resources</th>
+                    <th class="sheet-asset-table" data-i18n="quality">Quality</th>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_gr_asset1_desc" placeholder="DESCRIPTION">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset1_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset1_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset1_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset1_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_gr_asset2_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset2_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset2_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset2_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset2_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_gr_asset3_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset3_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset3_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset3_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset3_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_gr_asset4_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset4_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset4_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset4_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset4_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sheet-asset-table">
+                            <input type="text" name="attr_gr_asset5_desc">
+                        </td>
+                        <td class="sheet-asset-table">
+                            <input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset5_1"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset5_2"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-up" value="1" name="attr_gr_asset5_3"/>
+							<span></span> 
+							<input type="checkbox" class="sheet-qual-tri sheet-qual-tri-down" value="1" name="attr_gr_asset5_4"/>
+							<span></span> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+	    </div>
+	    </div>
+	    </div>
+	    </div>
+	    	  
+	</div>
+	
+	</div>  
+
+	</div> 
+	</div> 
+
+</div> <!-- END OF CHARACTER SHEET -->
+
+<!-- ROLL TEMPLATES -->
+<rolltemplate class="sheet-rolltemplate-vigor1">
+            <div class="sheet-roll-name">{{name}} uses</div>
+            <div class="sheet-roll-quality">{{quality}}</div>
+            <div class="sheet-roll-dice">{{dice}}</div>
+            </div>
+		    <table class="sheet-roll-footer">
+		        <tr> 
+		            <td class="sheet-roll-qual-rating">{{qual_rating}}</td>
+		            <td class="sheet-roll-vigor-spent">{{vigor_spent}}</td>
+		            <td class="sheet-roll-asset-qual">{{asset_qual}}</td>
+		        </tr>
+		    </table>
+	        <div class="sheet-roll-notes">{{notes}}</div>
+</rolltemplate>
+
+</html>
