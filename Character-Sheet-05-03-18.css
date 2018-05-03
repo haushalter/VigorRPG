@@ -1,0 +1,2191 @@
+/*GENERALITIES*/
+button {
+	text-shadow: none !important;
+}
+label { 
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+}
+div {
+	cursor: default;
+	box-sizing: border-box;
+}
+input[type=text] {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	border: none;
+	background: none;
+	box-shadow: none;
+	width: 100%;
+	padding: 5px;
+	color: #3d4051;
+	border-radius: 0;
+	letter-spacing: 1px;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+textarea {
+	box-shadow: none;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	border: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	color: #3d4051;
+	resize: vertical;
+	display: block;
+	transition: all 0.2s;
+}
+li {
+	cursor: default;
+}
+li,
+li input[type=text] {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	position: relative;
+	color: #3d4051;
+}
+li:after {
+	background: #3d4051;
+	transform: rotate(45deg);
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	box-sizing: border-box;
+}
+span {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	cursor: default;
+}
+input[type=checkbox],
+input[type=radio] {
+	opacity: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+input[type=checkbox] + span,
+input[type=radio] + span {
+	cursor: pointer;
+	transition: all 0.2s;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/*input[type=number] {
+	color: #3d4051;
+	box-shadow: none;
+}*/
+.sheet-topholder {
+	margin-left: calc(55% + 5px);
+	line-height: 20px;
+	position: relative;
+	top: 0px    ;
+}
+
+.sheet-qual-hide {
+    visibility: hidden;
+}
+
+.sheet-hidden {
+	display: none !important;
+}
+input.sheet-hidediv:not(:checked) + div {
+	display: none;
+}
+
+.sheet-container {
+	position: relative;
+	width: 100%;
+	height: 30px;
+}
+.sheet-type-character {
+	position: relative;
+	top: 60px;
+	width: 100%;
+	min-width: 1100px;
+}
+.sheet-type-npc {
+    position: relative;
+    top: 60px;
+    width: 100%;
+    min-width: 1100px;
+}
+.sheet-type-gm {
+    position: relative;
+    top: -4px;
+    width: 100%;
+    min-width: 860px;
+}
+.sheet-vigor-logo {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10 10 20 10;
+}
+.sheet-vigor-icon {
+    width: 25%;
+    float: right;
+    display: inline;
+    z-index: 3;
+    margin-top: -75px;
+}
+.sheet-vigor-logo-gm {
+    width: 90%;
+    margin-top: -30px;
+    padding: 7px 20px 14px 10px;
+}
+.sheet-vigor-encounter-builder-img {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    padding: 0 10px 0 0;
+}
+/* SHEET SELECTOR SWITCH */
+.sheet-type-selector-holder {
+	line-height: 19px;
+	margin-left: auto;
+}
+input.sheet-type-selector {
+	width: 150px;
+	height: 20px;
+	display: none;
+}
+.sheet-selectorswitch:checked + .sheet-selectorswitch {
+	display: inline-block;
+}
+span.sheet-type-selector {
+	border-radius: 10px;
+	text-align: center;
+	background: #969696;
+	color: #353d54;
+	width: 150px;
+	font-size: 11px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	letter-spacing: 3px;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 600;
+	display: none;
+}
+input.sheet-type-selector:hover ~ span {
+	color: #353d54;
+	background: #9f9d5f;
+}
+input.sheet-type-selector[value="character"]:checked ~ span.sheet-type-selector-character,
+input.sheet-type-selector[value="gm"]:checked ~ span.sheet-type-selector-gm,
+input.sheet-type-selector[value="npc"]:checked ~ span.sheet-type-selector-npc {
+	display: inline-block;
+}
+
+/* COLUMN LAYOUT */
+.sheet-flex {
+	display: flex;
+}
+.sheet-flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+.sheet-flex-center {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sheet-right-column {
+    padding-left: 15px;
+}
+.sheet-col10 {
+    width: 10%;
+}
+.sheet-col15 {
+    width: 15%;
+}
+.sheet-col47 {
+	width: 47%
+}
+.sheet-col53 {
+	width: 53%;
+}
+.sheet-col20 {
+    width: 20%;
+}
+.sheet-col25 {
+    width: 25%;
+}
+.sheet-col27 {
+    width: 27%;
+}
+.sheet-col35 {
+	width: 35%;
+}
+.sheet-col37 {
+	width: 37%;
+}
+.sheet-col24b {
+	width: 24.25%;
+}
+.sheet-col30{
+    width: 30%;
+}
+.sheet-col33{
+    width: 33%;
+}
+.sheet-col39 {
+    width: 39%;
+}
+.sheet-col50 {
+	width: 50%;
+}
+.sheet-col52b {
+	width: 53%;
+}
+.sheet-col55 {
+	width: 55%;
+}
+.sheet-col40 {
+    width: 40%;
+}
+.sheet-col45{
+	width: 45%;
+}
+.sheet-col49 {
+    width: 49%;
+}
+.sheet-col49b {
+    width: 49.5%;
+}
+.sheet-col63 {
+	width: 63%;
+}
+.sheet-col60 {
+    width: 60%;
+}
+.sheet-col70{
+    width: 70%;
+}
+.sheet-col73{
+    width: 73%;
+}
+.sheet-col75 {
+    width:75%;
+}
+.sheet-col80 {
+    width: 80%;
+}
+.sheet-col85 {
+    width: 85%;
+}
+.sheet-col90 {
+    width: 90%;
+}
+.sheet-col97 {
+    width: 97%;
+}
+.sheet-col100 {
+	width: 100%;
+}
+/* MARGINS */
+.sheet-section-margin {
+    margin: 15px 0 0 0;
+}
+.sheet-bottom-margin {
+    margin: 10px 0 0 0;
+}
+.sheet-small-margin {
+    margin-top: 5px;
+}
+.sheet-small-indent {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.sheet-mod-margin {
+    margin-left: 5px;
+}
+.sheet-flaw-margin {
+    margin-right: 1%;
+}
+.sheet-footer-margin {
+    margin-top: 30px;
+}
+/* BACKGROUNDS, LINES, & DIVIDERS */
+.sheet-grey-background {
+    background-color: #dadada;
+    width: 100%;
+    height: 100%;
+    margin-left: 2px;
+    position: relative;
+}
+.sheet-encounter-body {
+    background-color: #dadada;
+    background-size: auto;
+    margin: 0 3px 0 5px;
+    padding: 10px 5px 10px 10px;
+    position: relative;
+}
+.sheet-roleplay-prompt-body {
+    background-color: #dadada;
+    background-size: auto;
+    margin: 0 0px 0 0px;
+    padding: 15px 0px 10px 0px;
+    position: relative;
+}
+.sheet-quality-rating-body {
+    background-color: #dadada;
+    background-size: auto;
+    margin: -2px 3px 0 3px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+.sheet-encounter-body-trait-pool {
+    background-color: #dadada;
+    background-size: auto;
+    margin: 0 3px 0 5px;
+    padding: 10px 0px 10px 0px;
+    position: relative;
+}
+.sheet-encounter-body-light {
+    background-color: #efefef;
+    background-size: auto;
+    margin: 0 3px 0 5px;
+    padding: 10px 5px 10px 10px;
+    position: relative;
+}
+.sheet-section-divider {
+	background-color: #000000;
+	width: 100%;
+	height: 12px;
+	color: white;
+	padding: 5px 5px 5px 5px;
+}
+.sheet-top-header-divider {
+	background-color: #000000;
+	height: 12px;
+	color: white;
+	padding: 5px 5px 5px 5px;
+}
+.sheet-encounter-header-bar {
+    background-color: #969696;
+    width: 100%;
+    height: 30px;
+    color: white;
+    padding: 3px 3px 3px 3px;
+    margin-left: 3px;
+}
+.sheet-rank-xp-bar {
+    background-color: #000000;
+	width: 75%;
+	height: 15px;
+	color: #000000;
+	margin-top: 1px;
+}
+.sheet-narr-xp-bar {
+    background-color: #969696;
+    width: 65%;
+	height: 15px;
+	color: #000000;
+	margin: 1px 0 0 0;;
+}
+.sheet-flaw-xp-bar {
+    float: right;
+    background-color: #969696;
+	width: 60%;
+	height: 15px;
+	color: #000000;
+	margin: 1px 0 0 0;;
+}
+.sheet-nat-xp-bar {
+    float: right;
+    background-color: #969696;
+	width: 50%;
+	height: 15px;
+	color: #000000;
+	margin: 1px 0 0 0;
+}
+.sheet-ties-xp-bar {
+    float: right;
+    background-color: #969696;
+	width: 80%;
+	height: 15px;
+	color: #000000;
+	margin: 1px 0 0 0;;
+}
+.sheet-journey-bar {
+    float: right;
+    background-color: #969696;
+	width: 100%;
+	height: 15px;
+	color: #000000;
+	margin: 1px 0 0 0;
+}
+.sheet-qualities-bar {
+	background-color: #000000;
+	float: right;
+	width: 100%;
+	height: 15px;
+	color: white;
+}
+
+.sheet-xp-align {
+    float: right;
+    margin-right: 5px;
+}
+.sheet-rank-xp-align {
+    text-align: right;
+    padding-right: 10px;
+}
+.sheet-qual-xp-align {
+    flex: 1;
+    float: right;
+}
+/* VIGOR XP ICON */
+.sheet-vigor-xp {
+	position: absolute;
+	padding: 2px;
+	z-index: 1;
+	margin-left: 65%;
+	height: 109px;
+	width: 95px;
+	transition: all 0.2s;
+}
+.sheet-vigor .sheet-section-divider {
+	text-align: center;
+}
+.sheet-vigor {
+	position: relative;
+}
+.sheet-vigor .sheet-italic {
+	font-size: 9px;
+}
+.sheet-vigor> div:nth-child(2) {
+	line-height: 11px;
+	text-align: center;
+	padding: 2px 0 0 5px;
+}
+.sheet-vigor .sheet-vigor-xp {
+	margin-top: -100px;
+	margin-left: 75%;
+	
+}
+.sheet-vigor .sheet-zeroholder {
+	margin: -7px 0 0 74%;
+	z-index: 3;
+}
+/* Positioning inputs on clocks */
+.sheet-4clock.sheet-vigor-xp input {
+	height: 20px;
+	width: 40px;
+}
+.sheet-4clock.sheet-vigor-xp input[value="1"] {
+	margin-left: 20px;
+	margin-top: 33px;
+	transform: rotate(42deg);
+}
+.sheet-4clock.sheet-vigor-xp input[value="2"] {
+	margin-top:46px;
+}
+.sheet-4clock.sheet-vigor-xp input[value="3"] {
+	margin-left: 40px;
+	margin-top: 33px;
+}
+.sheet-4clock.sheet-vigor-xp input[value="4"] {
+	margin-left: 40px;
+	margin-top: 52px;
+}
+input[name="attr_vigor_xp"][value="0"]:checked ~ .sheet-4clock.sheet-vigor-xp,
+input[name="attr_npc_vigor_xp"][value="0"]:checked ~ .sheet-4clock.sheet-vigor-xp{
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/VigorXP-0.png);
+}
+input[name="attr_vigor_xp"][value="1"]:checked ~ .sheet-4clock.sheet-vigor-xp,
+input[name="attr_npc_vigor_xp"][value="1"]:checked ~ .sheet-4clock.sheet-vigor-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/VigorXP-1.png);
+}
+input[name="attr_vigor_xp"][value="2"]:checked ~ .sheet-4clock.sheet-vigor-xp,
+input[name="attr_npc_vigor_xp"][value="2"]:checked ~ .sheet-4clock.sheet-vigor-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/VigorXP-2.png);
+}
+input[name="attr_vigor_xp"][value="3"]:checked ~ .sheet-4clock.sheet-vigor-xp,
+input[name="attr_npc_vigor_xp"][value="3"]:checked ~ .sheet-4clock.sheet-vigor-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/VigorXP-3.png);
+}
+input[name="attr_vigor_xp"][value="4"]:checked ~ .sheet-4clock.sheet-vigor-xp,
+input[name="attr_npc_vigor_xp"][value="4"]:checked ~ .sheet-4clock.sheet-vigor-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/VigorXP-4.png);
+}
+/* CORRUPTION XP ICON */
+.sheet-corruption-xp {
+	position: absolute;
+	padding: 2px;
+	z-index: 3;
+	margin-left: 65%;
+	height: 55px;
+	width: 47px;
+	transition: all 0.2s;
+}
+.sheet-corruption .sheet-section-divider {
+	text-align: center;
+}
+.sheet-corruption {
+	position: relative;
+}
+.sheet-corruption .sheet-italic {
+	font-size: 9px;
+}
+.sheet-corruption> div:nth-child(2) {
+	line-height: 11px;
+	text-align: center;
+	padding: 2px 0 0 5px;
+}
+.sheet-corruption .sheet-corruption-xp {
+	margin-top: -290px;
+	margin-left: 83%;
+	
+}
+.sheet-corruption .sheet-zeroholder {
+	margin: -275px 0 0 78%;
+	z-index: 4;
+}
+/* Positioning inputs on clocks */
+.sheet-4clock.sheet-corruption-xp input {
+	height: 20px;
+	width: 23px;
+}
+.sheet-4clock.sheet-corruption-xp input[value="1"] {
+	margin-left: 0px;
+	margin-top: 0px;
+	transform: rotate(-42deg);
+}
+.sheet-4clock.sheet-corruption-xp input[value="2"] {
+	margin-top: 20px;
+}
+.sheet-4clock.sheet-corruption-xp input[value="3"] {
+	margin-left: 23px;
+	margin-top: 0px;
+}
+.sheet-4clock.sheet-corruption-xp input[value="4"] {
+	margin-left: 23px;
+	margin-top: 20px;
+}
+input[name="attr_corruption_xp"][value="0"]:checked ~ .sheet-4clock.sheet-corruption-xp,
+input[name="attr_npc_corruption_xp"][value="0"]:checked ~ .sheet-4clock.sheet-corruption-xp{
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-0.png);
+}
+input[name="attr_corruption_xp"][value="1"]:checked ~ .sheet-4clock.sheet-corruption-xp,
+input[name="attr_npc_corruption_xp"][value="1"]:checked ~ .sheet-4clock.sheet-corruption-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-1.png);
+}
+input[name="attr_corruption_xp"][value="2"]:checked ~ .sheet-4clock.sheet-corruption-xp,
+input[name="attr_npc_corruption_xp"][value="2"]:checked ~ .sheet-4clock.sheet-corruption-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-2.png);
+}
+input[name="attr_corruption_xp"][value="3"]:checked ~ .sheet-4clock.sheet-corruption-xp,
+input[name="attr_npc_corruption_xp"][value="3"]:checked ~ .sheet-4clock.sheet-corruption-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-3.png);
+}
+input[name="attr_corruption_xp"][value="4"]:checked ~ .sheet-4clock.sheet-corruption-xp,
+input[name="attr_npc_corruption_xp"][value="4"]:checked ~ .sheet-4clock.sheet-corruption-xp {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-4.png);
+}
+/* WOUNDS */
+.sheet-wound-type {
+    text-align: left;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 300;
+    color: #000000;
+    margin-left: 20px;
+    
+}
+.sheet-wound-penalty {
+    text-align: center;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+    margin left: 27px;
+}
+.sheet-wound-table {
+    border-collapse: collapse;
+    background: transparent;
+    border: 0px transparent;
+    box-shadow: none;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+}
+.sheet-wound-table th {
+    text-align: center;
+    vertical-align: top;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 300;
+    color: #000000;
+    width: 33%;
+    height: 2em;
+}
+.sheet-wound-table tr {
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 12px;
+    font-weight: 200;
+    color: #000000;
+    width: 33%;
+    height: 1em;
+}
+.sheet-wound-table-hearts {
+    background-color: #000000;
+	color: white;
+}
+.sheet-wound-align {
+    margin-top: -30px;
+}
+/* WOUNDS MINOR ICON */
+.sheet-minor-wounds-holder {
+	position: absolute;
+	padding: 2px;
+	z-index: 1;
+	margin-left: 20%;
+	height: 54px;
+	width: 66px;
+}
+input.sheet-minor-wounds-holder + span:last-child {
+	margin-right: 2px !important;
+}
+input.sheet-minor-wounds-holder:last-of-type {
+	width: 66px;
+	padding: -2px;
+	margin: -2px;
+}
+input.sheet-minor-wounds-holder:hover + span {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+.sheet-minor-wounds .sheet-qualities-bar {
+	text-align: center;
+}
+.sheet-minor-wounds {
+	position: relative;
+}
+.sheet-minor-wounds .sheet-italic {
+	font-size: 9px;
+}
+
+.sheet-minor-wounds .sheet-minor-wounds-holder {
+	margin-top: -60px;
+	
+}
+.sheet-minor-wounds .sheet-zeroholder {
+	margin: 28px 0 0 10px;
+	z-index: 3;
+}
+/* Positioning inputs on clocks */
+.sheet-wound-4clock.sheet-minor-wounds-holder input {
+	height: 10px;
+	width: 30px;
+}
+.sheet-wound-4clock.sheet-minor-wounds-holder input[value="1"] {
+	margin-left: -15px;
+	margin-top: 16px;
+	transform: rotate(42deg);
+}
+.sheet-wound-4clock.sheet-minor-wounds-holder input[value="2"] {
+	margin-left: -15px;
+	margin-top:23px;
+}
+.sheet-wound-4clock.sheet-minor-wounds-holder input[value="3"] {
+	margin-left: -25px;
+	margin-top: 16px;
+	transform: rotate(-42deg);
+}
+.sheet-wound-4clock.sheet-minor-wounds-holder input[value="4"] {
+	margin-left: -25px;
+	margin-top: 26px;
+}
+input[name="attr_minor_wounds_1"][value="0"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_2"][value="0"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_3"][value="0"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_1"][value="0"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_2"][value="0"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_3"][value="0"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder{
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Minor-0.png);
+}
+input[name="attr_minor_wounds_1"][value="1"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_2"][value="1"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_3"][value="1"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_1"][value="1"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_2"][value="1"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_3"][value="1"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Minor-1.png);
+}
+input[name="attr_minor_wounds_1"][value="2"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_2"][value="2"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_3"][value="2"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_1"][value="2"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_2"][value="2"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_3"][value="2"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder{
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Minor-2.png);
+}
+input[name="attr_minor_wounds_1"][value="3"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_2"][value="3"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_3"][value="3"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_1"][value="3"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_2"][value="3"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_3"][value="3"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Minor-3.png);
+}
+input[name="attr_minor_wounds_1"][value="4"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_2"][value="4"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_minor_wounds_3"][value="4"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_1"][value="4"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_2"][value="4"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder,
+input[name="attr_npc_minor_wounds_3"][value="4"]:checked ~ .sheet-wound-4clock.sheet-minor-wounds-holder{
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Minor-4.png);
+}
+/* WOUNDS DEBILITATING ICON */
+.sheet-deb-wounds-holder {
+	position: absolute;
+	padding: 2px;
+	z-index: 1;
+	margin-left: 20%;
+	height: 54px;
+	width: 66px;
+}
+input.sheet-deb-wounds-holder + span:last-child {
+	margin-right: 2px !important;
+}
+input.sheet-deb-wounds-holder:last-of-type {
+	width: 33px;
+	padding: -2px;
+	margin: -2px;
+}
+input.sheet-deb-wounds-holder:hover + span {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+.sheet-deb-wounds .sheet-qualities-bar {
+	text-align: center;
+}
+.sheet-deb-wounds {
+	position: relative;
+}
+.sheet-deb-wounds .sheet-italic {
+	font-size: 9px;
+}
+
+.sheet-deb-wounds .sheet-deb-wounds-holder {
+	margin-top: -60px;
+	
+}
+.sheet-deb-wounds .sheet-zeroholder {
+	margin: 28px 0 0 10px;
+	z-index: 3;
+}
+/* Positioning inputs on clocks */
+.sheet-wound-2clock.sheet-deb-wounds-holder input {
+	height: 33px;
+	width: 33px;
+}
+.sheet-wound-2clock.sheet-deb-wounds-holder input[value="1"] {
+	margin-left: -10px;
+	margin-top: 0px;;
+}
+.sheet-wound-2clock.sheet-deb-wounds-holder input[value="2"] {
+	margin-left:10px;
+}
+input[name="attr_deb_wounds_1"][value="0"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_deb_wounds_2"][value="0"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_deb_wounds_3"][value="0"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_1"][value="0"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_2"][value="0"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_3"][value="0"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Debilitating-0.png);
+}
+input[name="attr_deb_wounds_1"][value="1"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_deb_wounds_2"][value="1"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_deb_wounds_3"][value="1"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_1"][value="1"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_2"][value="1"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_3"][value="1"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Debilitating-1.png);
+}
+input[name="attr_deb_wounds_1"][value="2"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_deb_wounds_2"][value="2"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_deb_wounds_3"][value="2"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_1"][value="2"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_2"][value="2"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder,
+input[name="attr_npc_deb_wounds_3"][value="2"]:checked ~ .sheet-wound-2clock.sheet-deb-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Debilitating-2.png);
+}
+/* WOUNDS CRITICAL ICON */
+.sheet-hide-wound {
+    background: transparent;
+    margin: -2px 0 0 21px;
+}
+.sheet-crit-wounds-holder {
+	position: absolute;
+	padding: 2px;
+	z-index: 1;
+	margin-left: 20%;
+	height: 54px;
+	width: 66px;
+}
+input.sheet-crit-wounds-holder + span:last-child {
+	margin-right: 2px !important;
+}
+input.sheet-crit-wounds-holder:last-of-type {
+	width: 66px;
+	padding: -2px;
+	margin: -2px;
+}
+input.sheet-crit-wounds-holder:hover + span {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+.sheet-crit-wounds .sheet-qualities-bar {
+	text-align: center;
+}
+.sheet-crit-wounds {
+	position: relative;
+}
+.sheet-crit-wounds .sheet-italic {
+	font-size: 9px;
+}
+
+.sheet-crit-wounds .sheet-crit-wounds-holder {
+	margin-top: -60px;
+	
+}
+.sheet-crit-wounds .sheet-zeroholder {
+	margin: 28px 0 0 10px;
+	z-index: 3;
+}
+/* Positioning inputs on clocks */
+.sheet-wound-1clock.sheet-crit-wounds-holder input {
+	height: 54px;
+	width: 54px;
+}
+.sheet-wound-1clock.sheet-crit-wounds-holder input[value="1"] {
+	margin-left: -15px;
+	margin-top: 0px;;
+}
+input[name="attr_crit_wounds_1"][value="0"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_crit_wounds_2"][value="0"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_crit_wounds_3"][value="0"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_npc_crit_wounds_1"][value="0"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_npc_crit_wounds_2"][value="0"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_npc_crit_wounds_3"][value="0"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Critical-0.png);
+}
+input[name="attr_crit_wounds_1"][value="1"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_crit_wounds_2"][value="1"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_crit_wounds_3"][value="1"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_npc_crit_wounds_1"][value="1"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_npc_crit_wounds_2"][value="1"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder,
+input[name="attr_npc_crit_wounds_3"][value="1"]:checked ~ .sheet-wound-1clock.sheet-crit-wounds-holder {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wounds-Critical-1.png);
+}
+
+/* QUALITIES */
+button[type=roll].sheet-quality-button {
+	letter-spacing: 1px;
+	text-align: left;
+	width: 88px;
+	margin-left: -2px;
+	margin-top: -1px;
+}
+button[type=roll].sheet-rollbutton:hover {
+	color: #a3a376;
+}
+button[type=roll].sheet-encounter-roll:hover {
+	color: #353d54;
+	background-color: #a3a376;
+}
+button[type=roll].sheet-custom-roll:hover {
+	color: #353d54;
+	background-color: #a3a376;
+}
+button[type=roll] {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	background: transparent;
+	box-shadow: none;
+	letter-spacing: 1px;
+	font-weight: 300;
+}
+button[type=roll]:before {
+	content: "" !important;
+}
+button[type=roll].sheet-rollbutton {
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #ffffff;
+	background: transparent;
+	border: none;
+	padding: 0;
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 9px;
+}
+button[type=roll].sheet-encounter-roll {
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 3px;
+	color: #353d54;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #969696;
+	border-radius: 0px;
+	border: 0px transparent;
+	box-shadow: none;
+	padding: 0;
+	font-size: 20px;
+	font-weight: 500;
+	height: auto;
+	width: 100%;
+	margin-right: 5px;
+}
+button[type=roll].sheet-custom-roll {
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 3px;
+	color: #353d54;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #969696;
+	border-radius: 10px;
+	border: 0px transparent;
+	box-shadow: none;
+	padding: 0;
+	font-size: 20px;
+	font-weight: 500;
+	height: auto;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.sheet-action > div {
+	width: 15px;
+}
+.sheet-action > div:first-child {
+	border-right: 1px solid #ffffff;
+	height: 22px;
+	width: 17px;
+}
+/* XP & RATINGS TRIANGLES */
+.sheet-ratings-holder {
+    background: transparent;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+input.sheet-tri {
+	width: 12px;
+	padding: 0 -8px 0 0;
+	margin-right: -8px;
+}
+input.sheet-encounter-mod-tri + span {
+    width: 17px;
+    height: 15px;
+}
+input.sheet-tri + span {
+	width: 12px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 -8px 0 0;
+	margin-right: -8px;
+}
+input.sheet-tri + span:last-child {
+	margin-right: 0px !important;
+}
+input.sheet-tri:last-of-type {
+	width: 12px;
+	margin-right: -8px;
+}
+input.sheet-tri:hover + span {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+input.sheet-rating-tri {
+	width: 18px;
+}
+input.sheet-rating-tri + span {
+	width: 18px;
+	display: inline-block;
+	vertical-align: top;
+}
+input.sheet-rating-tri + span:last-child {
+	margin-right: 2px !important;
+}
+input.sheet-rating-tri:last-of-type {
+	width: 18px;
+}
+input.sheet-rating-tri:hover + span {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+input.sheet-xptri,
+input.sheet-xptri + span {
+	height: 10px;
+	padding: 0 -8px 0 0;
+	margin-right: -8px;
+	margin-top: 3px;
+}
+input.sheet-rating-tri-up, input.sheet-rating-tri-down,
+input.sheet-rating-tri-up + span, input.sheet-rating-tri-down + span {
+	height: 15px;
+	margin: -2px;
+	padding: -5px;
+}
+/* gold XP tri */
+input.sheet-xptri[type=radio] + span,
+input.sheet-xptri[type=checkbox]:checked + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/xp-tri-small-1.png);
+}
+/* white XP tri */
+input.sheet-xptri[type=checkbox] + span,
+input.sheet-xptri:checked ~ input.sheet-xptri[type=radio] + span,
+input.sheet-xptri:checked ~ input.sheet-xptri[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/xp-tri-small-0.png);
+}
+input.sheet-xptri + span,
+input.sheet-xptri[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/xp-tri-small-1.png);
+	margin-right: 1px;
+}
+input.sheet-tri:checked ~ input.sheet-xptri[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/xp-tri-small-0.png);
+}
+/* gold RATING tri */
+input.sheet-rating-tri-up[type=radio] + span,
+input.sheet-rating-tri-up[type=checkbox]:checked + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Up-1.png);
+}
+input.sheet-rating-tri-down[type=radio] + span,
+input.sheet-rating-tri-down[type=checkbox]:checked + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Down-1.png);
+}
+/* white RATING tri */
+input.sheet-rating-tri-up[type=checkbox] + span,
+input.sheet-rating-tri-up:checked ~ input.sheet-rating-tri-up[type=radio] + span,
+input.sheet-rating-tri-up:checked ~ input.sheet-rating-tri-up[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Up-0.png);
+}
+input.sheet-rating-tri-up + span,
+input.sheet-rating-tri-up[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Up-1.png);
+	margin-right: 1px;
+}
+input.sheet-tri:checked ~ input.sheet-rating-tri-up[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Up-0.png);
+}
+input.sheet-rating-tri-down[type=checkbox] + span,
+input.sheet-rating-tri-down:checked ~ input.sheet-rating-tri-down[type=radio] + span,
+input.sheet-rating-tri-down:checked ~ input.sheet-rating-tri-down[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Down-0.png);
+}
+input.sheet-rating-tri-down + span,
+input.sheet-rating-tri-down[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Down-1.png);
+	margin-right: 1px;
+}
+input.sheet-tri:checked ~ input.sheet-rating-tri-down[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Quality-Rating-Down-0.png);
+}
+
+input.sheet-target-number[type=number],
+input.sheet-target-number[type=number] + span {
+    width: 25px;
+    height: 28px;
+	background: transparent;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Target-Number-Hex-1.png);
+	box-shadow: none;
+	border-radius: 0;
+	border: none;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	margin-top: -10px;
+	color: #353d54;
+	text-align: center;
+}
+/*ASSET QUALITY TRIANGLES*/
+input.sheet-qual-tri {
+	width: 11px;
+	margin-top: 5px;
+}
+input.sheet-qual-tri + span {
+	width: 10.5px;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5px;
+}
+input.sheet-qual-tri + span:last-child {
+	margin-right: 0px !important;
+	margin-top: 5px;
+}
+input.sheet-qual-tri:last-of-type {
+	width: 10.5px;
+	margin-top: 5px;
+}
+input.sheet-qual-tri:hover + span {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+input.sheet-qual-tri-up, input.sheet-qual-tri-down,
+input.sheet-qual-tri-up + span, input.sheet-qual-tri-down + span {
+	height: 9px;
+	width: 10px;
+	margin-left: -3px;
+	margin-top: 5px;
+}
+/* gold QUALITY tri */
+input.sheet-qual-tri-up[type=checkbox]:checked + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Asset-Qual-Up-Small-1.png);
+	background-repeat: no-repeat;
+}
+input.sheet-qual-tri-down[type=checkbox]:checked + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Asset-Qual-Down-Small-1.png);
+    background-repeat: no-repeat;
+}
+/* white QUALITY tri */
+input.sheet-qual-tri-up[type=checkbox] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Asset-Qual-Up-Small-0.png);
+	background-repeat: no-repeat;
+}
+input.sheet-qual-tri-down[type=checkbox] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Asset-Qual-Down-Small-0.png);
+	background-repeat: no-repeat;
+}
+input.sheet-qual-tri:checked ~ input.sheet-qual-tri-down[type=radio] + span {
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Asset-Qual-Down-Small-0.png);
+	background-repeat: no-repeat;
+}
+
+/*ZERO MARKERS */
+input.sheet-zero {
+	width: 12px;
+	height: 12px;
+}
+input.sheet-zero + span {
+	width: 12px;
+	height: 12px;
+	margin-top: 2px;
+	margin-right: 3px;
+	display: inline-block;
+	vertical-align: top;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/XP-Zero1.png);
+}
+input.sheet-zero[type=radio]:checked + span {
+	opacity: 0;
+}
+input.sheet-blackx + span {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	background-position: center;
+	border: 0.5px solid #969696;
+	background-color: ##ffffff;  /*REMOVE THIS WHEN MAKE BLACK X*/
+	/*background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/XP-Zero1.png);*/
+}
+input.sheet-blackx:hover {
+    opacity: 70%;
+}
+input.sheet-blackx[type=checkbox]:checked + span {
+    width: 12px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	background-position: center;
+	border: 0.5px solid #969696;
+	background-color: #9f9d5f;  /*REMOVE THIS WHEN MAKE BLACK X*/
+	/*background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/XP-Zero1.png);*/
+}
+
+/* ENCOUNTER SHEET HEXES */
+.sheet-hex,
+.sheet-hex + span,
+input.sheet-hex[type="number"] + span {
+    width: 54px;
+    height: 62px;
+    text-align: center;
+    background-position: center;
+}
+
+td.sheet-hex-cell, 
+td.sheet-hex-cell + span,
+td input.sheet-hex-cell[type="number"] + span {
+    width: 32%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: -15px;
+    height: 62px;
+    text-align: center
+    background-position: center;
+}
+/*.sheet-hex-roll,
+.sheet-hex-roll + span,
+input.sheet-hex-roll[type="number"] + span {
+    width: 54px;
+    height: 62px;
+}
+td.sheet-hex-roll, 
+td.sheet-hex-roll + span,
+td input.sheet-hex-roll[type="number"] + span {
+    width: 54px;
+    height: 62px;
+    text-align: center
+    background-position: center;
+}*/
+button[type=roll].sheet-hex-roll:hover {
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+	color: #a3a376;
+}
+.sheet-hex-roll {
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Vigor-Hex.png);
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    height: 62px;
+    padding-bottom: 2px;
+    width: 54px;
+}
+.sheet-encounter-point-hex {
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Encounter-Hex.png);
+}
+
+td.sheet-encounter-point-hex {
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Encounter-Hex.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center;
+}
+
+/*INPUT TEXT BOXES*/
+.sheet-wound-labels {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+.sheet-subtitle-text {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    text-align: right;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
+.sheet-header input[type=text] {
+	width: 100%;
+	border-bottom: 1px solid #000000;
+	border-radius: 0;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	padding: 3px 5px 0 5px;
+	margin: 5px 0 0;
+	color: #353d54;
+	letter-spacing: 1px;
+}
+.sheet-encounter-infoblock input[type=text] {
+	width: 100%;
+	border-bottom: 1px solid #000000;
+	border-radius: 0;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	padding: 0px 5px 0 5px;
+	margin: 0px 5px 10px -5px;
+	color: #353d54;
+	letter-spacing: 1px;
+}
+.sheet-encounterblock-title-info input[type=text] {
+	width: 100%;
+	border-bottom: 1px solid #000000;
+	border-radius: 0;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	padding: 0px 5px 0 5px;
+	margin: -10px 5px 0px -5px;
+	color: #353d54;
+	letter-spacing: 1px;
+}
+.sheet-encounter-infoblock input[type=number],
+.sheet-encounter-infoblock input[type=number] + span {
+	width: 100%;
+	border-bottom: 1px solid #000000;
+	background: transparent;
+	box-shadow: none;
+	border-radius: 0;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	padding: 0px 5px 0 5px;
+	margin: -1px 0 3px 0px;
+	color: #353d54;
+	letter-spacing: 1px;
+}
+.sheet-encounter-infoblock {
+    font-weight: 300;
+    color: #353d54;
+}
+
+.sheet-header {
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #969696;
+}
+.sheet-rank {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 400;
+    color: 000000;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: right;
+    margin-left: -25%;
+    vertical-align: top;
+}
+.sheet-rank input[type="number"] {
+    border: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: #353d54;
+    text-align: right;
+    vertical-align: top;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    width: 1.5em;
+    margin-top: -3px;
+    margin-left: -5px;
+    height: 1em;
+}
+
+/* DROPDOWN MENUS */
+.select, 
+.sheet-journey-type-menu {
+  border: 0px;
+  background: transparent;
+  font-size: 14px;
+  max-width: 50px;
+  height: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.select, 
+.sheet-encounter-type-menu {
+  border: 0px;
+  background: transparent;
+  background-position: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  width: 100%;
+  height: 23px;
+  box-shadow: none;
+  font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #353d54;
+  margin-right: 5px;
+}
+
+/* REPEATING CONTAINERS */
+.repcontainer[data-groupname="repeating_item"] {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+.repcontainer[data-groupname="repeating_item"] .sheet-item {
+	flex-grow: 1;
+}
+.sheet-regularitems button.repcontrol_edit {
+	margin-bottom: 17px;
+	color: black;
+}
+
+.sheet-regularitems .repcontrol {
+	height: 38px;
+	color: black;
+}
+.repcontainer[data-groupname="repeating_item"] .repitem {
+	display: flex;
+	flex-grow: 1;
+}
+.repcontainer[data-groupname="repeating_item"] {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+.repcontainer[data-groupname="repeating_item"] .sheet-item {
+	flex-grow: 1;
+}
+.sheet-small-repcontrol button.repcontrol_edit,
+.sheet-small-repcontrol button.repcontrol_add {
+	margin-top: 3px;
+}
+.sheet-small-repcontrol button.repcontrol_edit,
+.sheet-small-repcontrol button.repcontrol_add {
+	font-weight: 600;
+	font-size: 12px;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	padding: 4px;
+}
+
+/* TABLES */
+.sheet-vigor-table {
+    margin-top: -10px;
+    width: 50%;
+    border-collapse: collapse;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+}
+.sheet-vigor-table td {
+   border-right: 5px solid #969696;
+    border-top: transparent;
+    border-left: transparent;
+    border-bottom: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: #353d54;
+    text-align: center;
+    vertical-align: top;  
+}
+.sheet-vigor-table input[type="number"] {
+    border: transparent;
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    height: 1em;
+    color: #353d54;
+    text-align: center;
+    vertical-align: bottom;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+}
+.sheet-trait-pool-table {
+    border: transparent;
+    background; transparent;
+    box-shadow: none;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sheet-encounter-table {
+    width:100%;
+    border-collapse: collapse;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+th.sheet-encounter-table {
+    border: 0.5px solid #969696;
+    background: #969696;
+    color: #ffffff;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+td.sheet-encounter-table {
+    border: 0.5px solid #969696;
+    background: #ffffff;
+    color: #353d54;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.sheet-asset-table {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    vertical-align: middle;
+}
+th.sheet-asset-table {
+    border: 0.5px solid #969696;
+    background: #969696;
+    color: #ffffff;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 1em;
+}
+/*
+.sheet-asset-table tr {
+    height: 1em;
+    font-size: 8px;
+}    */
+.sheet-asset-table tr td {
+    border: 0.5px solid #969696;
+    background: #ffffff;
+    color: #353d54;
+    width: 50%;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding-left: 10px;
+    vertical-align: top;
+    height: 1em;
+    max-height: 1em;
+}
+.sheet-asset-table input[type="text"] {
+    padding: 0 0 0 0;
+    font-size: 12px;
+}
+.sheet-journey-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    margin-left: 0px;
+    margin-right: 3px;
+}
+.sheet-journey-table input[type="text"] {
+    padding: 0 0 0 10px;
+    font-size: 14px;
+}
+th.sheet-journey-table {
+    border: 0.5px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 625;
+    letter-spacing: 3px;
+    font-size: 30px;
+    padding-left: auto;
+    padding-right: auto;
+    line-height: 40px;
+}
+td.sheet-journey-table-desc {
+    border: 0.5px solid #000000;
+    background: #ffffff;
+    color: #353d54;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 1px 0px 1px 0px;
+    height: 1em;
+    max-width: 45%;
+    max-height: 1em;
+}
+td.sheet-journey-table-menu {
+    border: 0.5px solid #000000;
+    background: #ffffff;
+    color: #353d54;
+    letter-spacing: 1px;
+    max-width: 50px;
+    padding: 0 0 0 0;
+}
+.sheet-corruption-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    margin-left: 0px;
+    padding-right: 5px;
+    margin-left: 10px;
+}
+.sheet-corruption-table input[type="text"] {
+    padding: 0 0 0 10px;
+    font-size: 14px;
+}
+th.sheet-corruption-table {
+    border: 0.5px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 625;
+    letter-spacing: 3px;
+    font-size: 30px;
+    padding-left: 5px;
+    line-height: 40px;
+}
+td.sheet-corruption-table-desc {
+    border: 0.5px solid #000000;
+    background: #ffffff;
+    color: #353d54;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 2px 0px 2px 0px;
+    height: 1em;
+}
+/* NOTES SECTION */
+textarea.sheet-notes {
+	margin-right: 5px;
+	margin-bottom: 5px;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #353d54;
+	font-size: 14px;
+	width: 100%;
+	background-image: -webkit-linear-gradient(top, transparent, transparent 20px, #a7a7a7 0);
+	background-image: -moz-linear-gradient(top, transparent, transparent 20px, #a7a7a7 0);
+	background-image: -o-linear-gradient(top, transparent, transparent 20px, #a7a7a7 0);
+	background-image: linear-gradient(top, transparent, transparent 20px, #a7a7a7 0);
+	background-size: 100% 21px;
+	line-height: 21px;
+	height: 100%;
+	min-height: 483px;
+}
+textarea.sheet-first-impressions {
+	margin-right: 0px;
+	margin-bottom: 5px;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #353d54;
+	font-size: 14px;
+	height: 63px;
+	background-image: -webkit-linear-gradient(top, transparent, transparent 20px, #000000 0);
+	background-image: -moz-linear-gradient(top, transparent, transparent 20px, #000000 0);
+	background-image: -o-linear-gradient(top, transparent, transparent 20px, #000000 0);
+	background-image: linear-gradient(top, transparent, transparent 20px, #000000 0);
+	background-size: 100% 21px;
+	line-height: 21px;
+	margin-top: -20px;
+	text-indent: 7em;
+}
+.sheet-first-impressions-title {
+    padding-top: 15px;
+    z-index: -1;
+}
+/* FONT STYLES */
+.sheet-quality-header{
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    margin-top:-1px;
+}
+.sheet-title-text {
+    text-transform: uppercase;
+    font-family:"Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 625;
+    color: #000000;
+    letter-spacing: 3px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+.sheet-vigor-title-text {
+    text-transform: uppercase;
+    font-family:"Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 88px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 15px;
+    padding-bottom: 5px;
+    vertical-align: top;
+}
+.sheet-encounter-header {
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding-left: 5px;
+    padding-top: 3px;
+    vertical-align: middle;
+}
+.sheet-encounter-threats-header {
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    padding-top: 3px;
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.sheet-encounter-info-titles {
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 2px;
+    padding-left: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.sheet-encounter-values {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    background: transparent;
+    border: 0px;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+    color: #3d4051;
+    z-index: 3;
+    margin-left: -8px;
+    margin-top: 15px;
+}
+.sheet-trait-pool-values {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    background: transparent;
+    border: 0px;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: top;
+    color: #3d4051;
+    z-index: 3;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.sheet-encounterblock-stat-values {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    background: transparent;
+    border: 0px;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 500;
+    width: 10px;
+    letter-spacing: 2px;
+    text-align: left;
+    vertical-align: middle;
+    color: #3d4051;
+    margin-top: 0px;
+    padding: 0 -15px 0 5px;
+}
+.sheet-encounterblock-stat-values input[type="number"] {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    background: transparent;
+    border: 0px;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 500;
+    width: 10px;
+    letter-spacing: 2px;
+    text-align: left;
+    vertical-align: middle;
+    color: #3d4051;
+    margin-top: 0px;
+    padding: 0 -15px 0 5px;
+}
+.sheet-encounter-label-text {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: left;
+    padding-left: 5px;
+}
+.sheet-encounterblock-labels {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 7px 0 0 0;
+}
+.sheet-pc-info-labels {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-left: 3px;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: 5px;
+}
+td.sheet-encounter-label-text {
+    text-align: center;
+    vertical-align: top;
+}
+.sheet-xp-desc {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    color: #7f7f7f;
+    padding-left: 10px;
+}
+.sheet-journey-header {
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    color: #ffffff;
+    padding-left: 10px;
+}
+.sheet-label,
+input[type=text].sheet-label,
+textarea.sheet-label {
+	text-transform: uppercase;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+}
+.sheet-char-info-label span{
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: #969696;
+    z-index: 3;
+    
+}
+ input[type=text].sheet-char-info-label {
+    text-indent: 2em;
+    margin-top: -20px;
+}
+.sheet-narr-text-input span{
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: #000000;
+    z-index: 3;
+}
+ input[type=text].sheet-narr-text-input {
+    text-indent: 4em;
+    margin-top: -37px;
+}
+.sheet-flaw-text-input span{
+    text-transform: uppercase;
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    color: #000000;
+    z-index: 3;
+}
+ input[type=text].sheet-flaw-text-input {
+    text-indent: 1em;
+    margin-top: -37px;
+}
+.sheet-char-infoblock-name {
+    position: relative;
+    margin-top: -95px;
+}
+.sheet-char-infoblock-impressions {
+    position: relative;
+    margin-top: -60px;
+}
+.sheet-smallcaps {
+	text-transform: uppercase;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	letter-spacing: 2px;
+	font-style: "Ultra Light";
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+.sheet-bold {
+    font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+    font-style: "Demi Bold";
+	font-weight: 800;
+	letter-spacing: 1px;
+}
+.sheet-italic,
+.sheet-italic input[type=text] {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-style: Italic;
+	font-weight: 200;
+}
+
+/*CHECKBOX STUFF*/
+.sheet-settings input.sheet-checkbox[type=checkbox] {
+	margin: 0;
+}
+.sheet-settings input.sheet-checkbox[type=checkbox] + span {
+	flex-shrink: 0;
+	margin-right: 6px;
+}
+input.sheet-checkbox.sheet-circlebox-small + span {
+	border-radius: 40px;
+	height: 9px;
+	width: 9px;
+	background: white;
+}
+
+/* ROLL TEMPLATES */
+
+/* VIGOR1 */
+/* Containter & Background */
+.sheet-rolltemplate-vigor1 .sheet-roll-pc {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 300px;
+    height: 258px;
+    overflow: hidden;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/vigor-pc-rolltemplate.png);
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-encounter {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 300px;
+    height: 258px;
+    overflow: hidden;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/vigor-gm-rolltemplate.png);
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-custom-pc {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 300px;
+    height: 258px;
+    overflow: hidden;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/vigor-custom-pc-rolltemplate.png);
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-npc {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 300px;
+    height: 258px;
+    overflow: hidden;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/vigor-npc-rolltemplate.png);
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+}
+/* Name */
+.sheet-rolltemplate-vigor1 .sheet-roll-name {
+	line-height: 0px;
+	height: 15px;
+	padding: 20px 0 0 5px;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #000000;
+	font-weight: 300;
+	font-size: 95%;
+}
+
+/* Quality */
+.sheet-rolltemplate-vigor1 .sheet-roll-quality {
+    line-height: 0px;
+	height: 25px;
+	padding: 18px 0 0 0px;
+	width: 100%;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #000000;
+	font-weight: 500;
+	font-size: 300%;
+	letter-spacing: 7px;
+}
+/* Inlinerolls */
+.sheet-rolltemplate-vigor1 .sheet-roll-dice .inlinerollresult {
+	border: 0px solid white !important;
+	background-color: transparent;      
+	font-weight: 600;
+	text-align: center;
+	color: #a3a376;
+	font-size: 500%;
+	text-shadow: 0px 0px 5px #ffffff, 0px 0px 8px #c9ded3;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-encounter-dice .inlinerollresult {
+	border: 0px solid white !important;
+	background-color: transparent;      
+	font-weight: 600;
+	text-align: center;
+	color: #ffffff;
+	font-size: 700%;
+	text-shadow: 0px 0px 5px #969696, 0px 0px 8px #000000;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-npc-dice .inlinerollresult {
+	border: 0px solid white !important;
+	background-color: transparent;      
+	font-weight: 600;
+	text-align: center;
+	color: #ffffff;
+	font-size: 500%;
+	text-shadow: 0px 0px 5px #969696, 0px 0px 8px #000000;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-qual-rating .inlinerollresult {
+	border: 0px solid white !important;
+	background-color: transparent;
+	font-weight: 400;
+	text-align: center;
+	vertical-align: top;
+	color: #ffffff;
+	font-size: 150%;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-vigor-spent {
+	border: 0px solid white !important;
+	background-color: transparent;     
+	font-weight: 500;
+	padding-top: 10px;
+	padding-left: 79px;
+	color: #ffffff;
+	font-size: 300%;
+}
+input.sheet-roll-vigor-spent[type=text][value="2d6kl1"] {
+    background: "0";
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-asset-qual {
+	border: 0px solid white !important;
+	background-color: transparent;     
+	font-weight: 400;
+	padding: 0px 28px 0 0px;
+	color: #ffffff;
+	font-size: 150%;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-encounter-type {
+	border: 0px solid white !important;
+	background-color: transparent;     
+	font-weight: 300;
+	font-style: italic;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 0px 47px 25px 0px;
+	margin-top: -5px;
+	color: #ffffff;
+	font-size: 150%;
+}
+
+/* Dice */
+.sheet-rolltemplate-vigor1 .sheet-roll-dice {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	height: 27px;
+	letter-spacing: 0px;	
+	font-weight: 800;
+	line-height: 20px;
+	padding: 13px 10px 0px 0px;
+	color: #ffffff;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-encounter-dice {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	height: 27px;
+	letter-spacing: 0px;	
+	font-weight: 800;
+	line-height: 20px;
+	margin-top: 20px;
+	padding: 20px 10px 0px 0px;
+	color: #ffffff;
+}
+.sheet-rolltemplate-vigor1 .sheet-roll-npc-dice {
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	height: 27px;
+	letter-spacing: 0px;	
+	font-weight: 800;
+	line-height: 20px;
+	padding: 13px 10px 0px 0px;
+	color: #ffffff;
+}
+
+/* RATINGS VIGOR AND ASSETS */
+
+.sheet-rolltemplate-vigor1 .sheet-roll-footer {
+    border-collapse: collapse;
+    border: 0px transparent;
+    background: transparent;
+    box-shadow: transparent;
+    width: 100%;
+    margin-left: 22px;
+    margin-top: 73px;
+}
+td.sheet-roll-footer {
+    height: 20px;
+    text-align: center;
+    vertical-align: top;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+}
+td.sheet-qual-rating {
+	font-weight: 400;
+	font-size: 150%;  
+}
+td.sheet-vigor-spent {
+	margin-left: 20px;
+	font-weight: 500;
+	font-size: 300%;
+}
+td.sheet-asset-qual {
+	padding-left: 0px;
+	font-weight: 400;
+	font-size: 150%;
+}
+td.sheet-encounter-type {
+	padding-left: 0px;
+	font-weight: 300;
+	font-size: 150%;
+}
+/* Notes */
+.sheet-rolltemplate-vigor1 .sheet-roll-notes {
+	width: 100%;
+	line-height: 112%;
+	font-size: 90%;
+	padding: 14px 5px 30px 16px;
+	color: #ffffff;
+	font-family: "Avenir Next Condensed", 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+/* Dice rolls */
+.sheet-rolltemplate-vigor1 .sheet-comma:last-child {
+		display: none;
+}*/
+
