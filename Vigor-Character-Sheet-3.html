@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+
+<!--CHARACTER SHEET-->
+<input type="checkbox" name="attr_sheet_type" class="sheet-hidediv sheet-hidden" value="character" checked/>
+<div class="sheet-type-character sheet-background">
+	<!-- LEFT COLUMN -->
+	<div class="sheet-left-full">
+	
+		<!-- CHARACTER INFO -->
+			<div class="sheet-lead-name">
+				<input class="sheet-char-info-label" type="text" name="attr_character_name"/>
+			</div>
+			<div class="sheet-char-sketch">
+				<textarea class="sheet-sketch" rows="5" type="text" name="attr_sketch"></textarea>
+		    </div>
+		    
+			<div class="sheet-bottom-margin"></div>
+	
+		<!-- NATURES -->
+		<div class="sheet-natures">
+		   <!-- ADVANCEMENT POINTS -->
+	        <div class="sheet-natures-ap-box">
+		            <input type="radio" class="sheet-narr-ap sheet-0-narr-ap" name="attr_natures_ap" value="0" checked>
+                    <input type="radio" class="sheet-narr-ap sheet-1-narr-ap" name="attr_natures_ap" value="1">
+                    <input type="radio" class="sheet-narr-ap sheet-2-narr-ap" name="attr_natures_ap" value="2">
+                    <input type="radio" class="sheet-narr-ap sheet-3-narr-ap" name="attr_natures_ap" value="3">
+                    <input type="radio" class="sheet-narr-ap sheet-4-narr-ap" name="attr_natures_ap" value="4">
+                    <input type="radio" class="sheet-narr-ap sheet-5-narr-ap" name="attr_natures_ap" value="5">
+
+                    <span class="sheet-narr-ap sheet-0-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Natures-AP-01.png"></img></span>
+                    <span class="sheet-narr-ap sheet-1-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Natures-AP-02.png"></img></span>
+                    <span class="sheet-narr-ap sheet-2-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Natures-AP-03.png"></img></span>
+                    <span class="sheet-narr-ap sheet-3-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Natures-AP-04.png"></img></span>
+                    <span class="sheet-narr-ap sheet-4-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Natures-AP-05.png"></img></span>
+		            <span class="sheet-narr-ap sheet-5-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Natures-AP-06.png"></img></span>
+		    </div>
+		   
+		   <!-- NATURE 1 -->
+		    <div class="sheet-nature-block1">
+		        <input class="sheet-nature-description" type="text" name="attr_nature1"/>
+		        <div class="sheet-nature-rating-block">
+		            <div class="sheet-nature-tri-down">
+		            <input type="checkbox" value="ENT" name="attr_nature1_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-rating">
+                    <input type="checkbox" value="+1/-3" name="attr_nature1_rating"><span></span>
+                    <input type="checkbox" value="+2/-2" name="attr_nature1_rating"><span></span>
+                    <input type="checkbox" value="+3/-1" name="attr_nature1_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-tri-up">
+		            <input type="checkbox" value="INT" name="attr_nature1_rating"><span></span>
+		            </div>
+		            </div>
+		    </div>
+		    
+		    <!-- NATURE 2 -->
+		    <div class="sheet-nature-block2">
+		        <input class="sheet-nature-description" type="text" name="attr_nature2"/>
+		        <div class="sheet-nature-rating-block">
+		            <div class="sheet-nature-tri-down">
+		            <input type="checkbox" value="ENT" name="attr_nature2_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-rating">
+                    <input type="checkbox" value="+1/-3" name="attr_nature2_rating"><span></span>
+                    <input type="checkbox" value="+2/-2" name="attr_nature2_rating"><span></span>
+                    <input type="checkbox" value="+3/-1" name="attr_nature2_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-tri-up">
+		            <input type="checkbox" value="INT" name="attr_nature2_rating"><span></span>
+		            </div>
+		            </div>
+		    </div>
+		    
+		    <!-- NATURE 3 -->
+		    <div class="sheet-nature-block3">
+		        <input class="sheet-nature-description" type="text" name="attr_nature3"/>
+		        <div class="sheet-nature-rating-block">
+		            <div class="sheet-nature-tri-down">
+		            <input type="checkbox" value="ENT" name="attr_nature3_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-rating">
+                    <input type="checkbox" value="+1/-3" name="attr_nature3_rating"><span></span>
+                    <input type="checkbox" value="+2/-2" name="attr_nature3_rating"><span></span>
+                    <input type="checkbox" value="+3/-1" name="attr_nature3_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-tri-up">
+		            <input type="checkbox" value="INT" name="attr_nature3_rating"><span></span>
+		            </div>
+		            </div>
+		    </div>
+		    
+		    <!-- NATURE 4 -->
+		    <div class="sheet-nature-block4">
+		        <input class="sheet-nature-description" type="text" name="attr_nature4"/>
+		        <div class="sheet-nature-rating-block">
+		            <div class="sheet-nature-tri-down">
+		            <input type="checkbox" value="ENT" name="attr_nature4_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-rating">
+                    <input type="checkbox" value="+1/-3" name="attr_nature4_rating"><span></span>
+                    <input type="checkbox" value="+2/-2" name="attr_nature4_rating"><span></span>
+                    <input type="checkbox" value="+3/-1" name="attr_nature4_rating"><span></span>
+		            </div>
+		            <div class="sheet-nature-tri-up">
+		            <input type="checkbox" value="INT" name="attr_nature4_rating"><span></span>
+		            </div>
+		            </div>
+		    </div>
+		    
+        </div> <!-- END NATURES-->
+        
+        <!-- NARRATIVES -->
+	    <div class="sheet-narratives-section">
+	        
+	        <!-- ADVANCEMENT POINTS -->
+	        <div class="sheet-narr-ap-box">
+		            <input type="radio" class="sheet-narr-ap sheet-0-narr-ap" name="attr_narr_ap" value="0" checked>
+                    <input type="radio" class="sheet-narr-ap sheet-1-narr-ap" name="attr_narr_ap" value="1">
+                    <input type="radio" class="sheet-narr-ap sheet-2-narr-ap" name="attr_narr_ap" value="2">
+                    <input type="radio" class="sheet-narr-ap sheet-3-narr-ap" name="attr_narr_ap" value="3">
+                    <input type="radio" class="sheet-narr-ap sheet-4-narr-ap" name="attr_narr_ap" value="4">
+
+                    <span class="sheet-narr-ap sheet-0-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-01.png"></img></span>
+                    <span class="sheet-narr-ap sheet-1-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-02.png"></img></span>
+                    <span class="sheet-narr-ap sheet-2-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-03.png"></img></span>
+                    <span class="sheet-narr-ap sheet-3-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-04.png"></img></span>
+                    <span class="sheet-narr-ap sheet-4-narr-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-05.png"></img></span>
+		    </div>
+	       
+	       <!-- NARRATIVE 1 -->
+	        <div class="sheet-narrative1">
+			    <textarea class="sheet-narrative-description" rows="3" type="text" name="attr_narrative1"></textarea>
+		    </div>
+		    
+		    <!-- NARRATIVE 2 -->
+		    <div class="sheet-narrative2">
+			    <textarea class="sheet-narrative-description" rows="3" type="text" name="attr_narrative2"></textarea>
+		    </div>
+		    
+		    <!-- NARRATIVE 3 -->
+		    <div class="sheet-narrative3">
+			    <textarea class="sheet-narrative-description" rows="3" type="text" name="attr_narrative3"></textarea>
+		    </div>
+		        
+		</div> <!-- END NARRATIVES -->
+		
+		<!-- ROOTS -->
+	    <div class="sheet-roots-section">
+		    <!-- ADVANCEMENT POINTS -->
+	        <div class="sheet-roots-ap-box">
+		            <input type="radio" class="sheet-roots-ap sheet-0-roots-ap" name="attr_roots_ap" value="0" checked>
+                    <input type="radio" class="sheet-roots-ap sheet-1-roots-ap" name="attr_roots_ap" value="1">
+                    <input type="radio" class="sheet-roots-ap sheet-2-roots-ap" name="attr_roots_ap" value="2">
+                    <input type="radio" class="sheet-roots-ap sheet-3-roots-ap" name="attr_roots_ap" value="3">
+                    <input type="radio" class="sheet-roots-ap sheet-4-roots-ap" name="attr_roots_ap" value="4">
+
+                    <span class="sheet-roots-ap sheet-0-roots-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-01.png"></img></span>
+                    <span class="sheet-roots-ap sheet-1-roots-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-02.png"></img></span>
+                    <span class="sheet-roots-ap sheet-2-roots-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-03.png"></img></span>
+                    <span class="sheet-roots-ap sheet-3-roots-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-04.png"></img></span>
+                    <span class="sheet-roots-ap sheet-4-roots-ap"><img src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Narr-Root-AP-05.png"></img></span>
+		    </div>
+	       
+	       <!-- ROOT 1 -->
+	        <div class="sheet-root1">
+			    <textarea class="sheet-root-description" rows="3" type="text" name="attr_root1"></textarea>
+		    </div>
+		    
+		    <!-- ROOT 2 -->
+		    <div class="sheet-root2">
+			    <textarea class="sheet-root-description" rows="3" type="text" name="attr_root2"></textarea>
+		    </div>
+		    
+		    <!-- ROOT 3 -->
+		    <div class="sheet-root3">
+			    <textarea class="sheet-root-description" rows="3" type="text" name="attr_root3"></textarea>
+		    </div>
+		      
+		</div> <!-- END ROOTS -->
+		
+		  <!-- CORRUPTION -->
+            <div class="sheet-corruption">
+                <!-- CORRUPTION TRACK-->
+                <div class="sheet-corruption-icon">
+                    <input type="radio" class="sheet-corruption-track sheet-no-corruption" name="attr_current_corruption" value="0" checked>
+                    <input type="radio" class="sheet-corruption-track sheet-1-corruption" name="attr_current_corruption" value="1">
+                    <input type="radio" class="sheet-corruption-track sheet-2-corruption" name="attr_current_corruption" value="2">
+                    <input type="radio" class="sheet-corruption-track sheet-3-corruption" name="attr_current_corruption" value="3">
+                    <input type="radio" class="sheet-corruption-track sheet-4-corruption" name="attr_current_corruption" value="4">
+
+                    <span class="sheet-corruption-track sheet-no-corruption"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Track-01.png"></img></span>
+                    <span class="sheet-corruption-track sheet-1-corruption"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Track-02.png"></img></span>
+                    <span class="sheet-corruption-track sheet-2-corruption"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Track-03.png"></img></span>
+                    <span class="sheet-corruption-track sheet-3-corruption"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Track-04.png"></img></span>
+                    <span class="sheet-corruption-track sheet-4-corruption"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Track-05.png"></img></span>
+                </div>
+                
+                <!-- CORRUPTION EFFECTS -->
+                
+                
+                <!-- corruption 1-->
+                <div class="sheet-corruption-1">
+                    <div class="sheet-corruption-recover-box1">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-0-2" name="attr_corruption_recover1" value="0" checked>
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-1-2" name="attr_corruption_recover1" value="1">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-2-2" name="attr_corruption_recover1" value="2">
+
+                        <span class="sheet-corruption-recover sheet-recover-0-2"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-2-01.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-1-2"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-2-02.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-2-2"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-2-03.png"></img></span>
+                    </div>
+                    
+                    <textarea type="text" class="sheet-corruption-effect1" name="attr_corruption_effect1"></textarea>
+                </div>
+                
+                <!-- corruption 2-->
+                <div class="sheet-corruption-2">
+                    <div class="sheet-corruption-recover-box2">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-0-3" name="attr_corruption_recover2" value="0" checked>
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-1-3" name="attr_corruption_recover2" value="1">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-2-3" name="attr_corruption_recover2" value="2">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-3-3" name="attr_corruption_recover2" value="3">
+
+                        <span class="sheet-corruption-recover sheet-recover-0-3"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-3-01.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-1-3"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-3-02.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-2-3"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-3-03.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-3-3"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-3-04.png"></img></span>
+                    
+                    <textarea type="text" class="sheet-corruption-effect2" name="attr_corruption_effect2"></textarea>
+                </div>
+                
+                <!-- corruption 3-->
+                <div class="sheet-corruption-3">
+                    <div class="sheet-corruption-recover-box3">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-0-4" name="attr_corruption_recover3" value="0" checked>
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-1-4" name="attr_corruption_recover3" value="1">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-2-4" name="attr_corruption_recover3" value="2">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-3-4" name="attr_corruption_recover3" value="3">
+                        <input type="radio" class="sheet-corruption-recover sheet-recover-4-4" name="attr_corruption_recover3" value="4">
+
+                        <span class="sheet-corruption-recover sheet-recover-0-4"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-4-01.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-1-4"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-4-02.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-2-4"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-4-03.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-3-4"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-4-04.png"></img></span>
+                        <span class="sheet-corruption-recover sheet-recover-4-4"><img class="sheet-corruption-recover-box" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Recover-4-05.png"></img></span>
+                    
+                    <textarea type="text" class="sheet-corruption-effect3" name="attr_corruption_effect3"></textarea>
+                </div>
+	        
+	        </div> <!-- END CORRUPTION SECTION -->
+		
+		    <!-- WOUNDS -->
+		    <div class="sheet-wound">
+		        <div class="sheet-wound-icon">
+		            <input type="radio" class="sheet-wound-track sheet-0-wound" name="attr_wound_track" value="0" checked>
+                    <input type="radio" class="sheet-wound-track sheet-1-wound" name="attr_wound_track" value="1">
+                    <input type="radio" class="sheet-wound-track sheet-2-wound" name="attr_wound_track" value="2">
+                    <input type="radio" class="sheet-wound-track sheet-3-wound" name="attr_wound_track" value="3">
+                    <input type="radio" class="sheet-wound-track sheet-4-wound" name="attr_wound_track" value="4">
+
+                    <span class="sheet-wound-track sheet-0-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-01.png"></img></span>
+                    <span class="sheet-wound-track sheet-1-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-02.png"></img></span>
+                    <span class="sheet-wound-track sheet-2-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-03.png"></img></span>
+                    <span class="sheet-wound-track sheet-3-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-04.png"></img></span>
+                    <span class="sheet-wound-track sheet-4-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-05.png"></img></span>
+		        </div>
+		        
+		        <div class="sheet-wound-description">
+		            <textarea type="text" class="sheet-wound-textbox" rows="3" name="attr_wounds_description"></textarea>
+		        </div>
+		    </div>
+		    
+		     <!-- CONDITIONS -->
+		    <div class="sheet-conditions">
+		        <!-- CONDITIONS TRACK-->
+		        <div class="sheet-wound-icon">
+		            <input type="radio" class="sheet-wound-track sheet-0-wound" name="attr_cond_track" value="0" checked>
+                    <input type="radio" class="sheet-wound-track sheet-1-wound" name="attr_cond_track" value="1">
+                    <input type="radio" class="sheet-wound-track sheet-2-wound" name="attr_cond_track" value="2">
+                    <input type="radio" class="sheet-wound-track sheet-3-wound" name="attr_cond_track" value="3">
+                    <input type="radio" class="sheet-wound-track sheet-4-wound" name="attr_cond_track" value="4">
+
+                    <span class="sheet-wound-track sheet-0-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-01.png"></img></span>
+                    <span class="sheet-wound-track sheet-1-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-02.png"></img></span>
+                    <span class="sheet-wound-track sheet-2-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-03.png"></img></span>
+                    <span class="sheet-wound-track sheet-3-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-04.png"></img></span>
+                    <span class="sheet-wound-track sheet-4-wound"><img class="sheet-wounds-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Wound-Cond-Track-05.png"></img></span>
+		        </div>
+		        
+		        <!-- INDIVIDUAL CONDITIONS -->
+		        <input type="checkbox" class="sheet-hidden sheet-hidediv" name="attr_individual_conditions" value="normal" checked/>
+				<div class="sheet-individual-conditions">
+					<input type="checkbox" name="attr_hunger" class="sheet-text-input" value="1"/>
+					<span data-i18n="hunger">hunger</span>
+					<input type="checkbox" name="attr_thirst" class="sheet-text-input" value="1"/>
+					<span data-i18n="thirst">thirst</span>
+					<input type="checkbox" name="attr_fever" class="sheet-text-input" value="1"/>
+					<span data-i18n="illness">illness</span>
+					<input type="checkbox" name="attr_fatigue" class="sheet-text-input sheet-last" value="1"/>
+					<span data-i18n="fatigue">fatigue</span>
+					<br/>
+					<input type="checkbox" name="attr_shock" class="sheet-text-input" value="1"/>
+					<span data-i18n="shock">shock</span>
+					<input type="checkbox" name="attr_fear" class="sheet-text-input" value="1"/>
+					<span data-i18n="fear">fear</span>
+					<input type="checkbox" name="attr_doubt" class="sheet-text-input" value="1"/>
+					<span data-i18n="doubt">doubt</span>
+					<input type="checkbox" name="attr_anger" class="sheet-text-input" value="1"/>
+					<span data-i18n="anger">anger</span>
+					<input type="checkbox" name="attr_panic" class="sheet-text-input sheet-last" value="1"/>
+					<span data-i18n="panic">panic</span>
+					<br/>
+					<input type="checkbox" name="attr_regret" class="sheet-text-input" value="1"/>
+					<span data-i18n="regret">regret</span>
+					<input type="checkbox" name="attr_shame" class="sheet-text-input" value="1"/>
+					<span data-i18n="shame">shame</span>
+					<input type="checkbox" name="attr_self-doubt" class="sheet-text-input" value="1"/>
+					<span data-i18n="self-doubt">self-doubt</span>
+					<input type="checkbox" name="attr_confusion" class="sheet-text-input sheet-last" value="1"/>
+					<span data-i18n="confusion">confusion</span>
+					<br/>
+					<input type="checkbox" name="attr_grief" class="sheet-text-input" value="1"/>
+					<span data-i18n="grief">grief</span>
+					<input type="checkbox" name="attr_aimlessness" class="sheet-text-input" value="1"/>
+					<span data-i18n="aimlessness">aimlessness</span>
+					<input type="checkbox" name="attr_distress" class="sheet-text-input" value="1"/>
+					<span data-i18n="distress">distress</span>
+					<input type="checkbox" name="attr_sorrow" class="sheet-text-input sheet-last" value="1"/>
+					<span data-i18n="sorrow">sorrow</span>
+				</div>
+				
+				<!-- OTHER CONDITIONS -->
+		        <div class="sheet-wound-description">
+		            <textarea type="text" class="sheet-cond-textbox" rows="3" name="attr_cond_description"></textarea>
+		        </div>
+		    </div> <!-- END CONDITIONS SECTION -->
+		
+	</div> <!-- END LEFT COLUMN-->
+	
+	
+	<!-- RIGHT COLUMN-->
+	<div class="sheet-right-full">
+	    <!-- VIGOR  -->
+	    <div class="sheet-vigor-title">
+	        <button type="roll" name="roll_Vigor" class="sheet-rollbutton sheet-vigor-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=vigor}}{{modifier=?{Other Modifiers|0}}}{{notes=?{Notes|}}}{{npc_dice=[[2d6+?{Other Modifiers|0}-@{current_vigor}]]}}' data-i18n="" data-i18n-title="vigor_description" title="Vigor"></button> 
+	     </div>
+	    
+	    <!-- CURRENT/MAX VIGOR -->
+	    <div class="sheet-vigor-current-max">
+	        <div class="sheet-current-vigor">
+	            <input class="sheet-vigor-score" type="number" name="attr_current_vigor"/>
+	        </div>
+	        <div class="sheet-max-vigor">
+	            <input class="sheet-vigor-score" type="number" name="attr_max_vigor"/>
+	        </div> <!-- END VIGOR -->
+	    </div>
+	    <!-- OTHER ROLL BUTTONS -->
+	    <div class="sheet-dust-button">
+	        <button type="roll" name="roll_Dust" class="sheet-rollbutton sheet-dust-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=The Dust}}{{?{Keyed Quality|Agility,@{agility}|Brawn,@{brawn}|Focus,@{focus}|Guile,@{guile}|Presence,@{presence}|Understanding,@{understanding}}}}{{vigor_spent=?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6|5,5d6|6,6d6|7,7d6|8,8d6|9,9d6|10,10d6}}}{{modifier=?{Other Modifiers|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6|5,5d6|6,6d6|7,7d6|8,8d6|9,9d6|10,10d6}+(-1*(?{Keyed Quality|Agility,@agility|Brawn,@brawn|Focus,@focus|Guile,@guile|Presence,@presence|Understanding,@understanding}))+?{Other Modifiers|0}]]}}' data-i18n="" data-i18n-title="dust_description" title="Dust"></button> 
+	    </div>
+	    
+	    <div class="sheet-ato-button">
+	        <button type="roll" name="roll_ATO" class="sheet-rollbutton sheet-ato-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=Against The Odds}}}{{modifier=?{Modifier|0}}}{{notes=?{Notes|}}}{{npc_dice=[[2d6+?{Modifier|0}]]}}' data-i18n="" data-i18n-title="ato_description" title="ATO"></button> 
+	    </div>
+	    
+	    <!-- QUALITIES -->
+	    <!-- left column -->
+	    <div class="sheet-left-quality">
+	        <!-- AGILITY -->
+	        <div class="sheet-agility">
+	            <input class="sheet-agility-score" type="number" name="attr_agility"/>
+	         <button type="roll" name="roll_agility" class="sheet-rollbutton sheet-agility-button" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=agility}}{{vigor_spent=?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}}}{{bonus_pen=?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}+@{agility}+?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}]]}}' data-i18n="" data-i18n-title="agility_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons"></button>
+            </div>
+            
+            <!-- BRAWN -->
+	        <div class="sheet-brawn">
+	            <input class="sheet-brawn-score" type="number" name="attr_brawn"/>
+	         <button type="roll" name="roll_brawn" class="sheet-rollbutton sheet-brawn-button" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=brawn}}{{vigor_spent=?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}}}{{bonus_pen=?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}+@{brawn}+?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}]]}}' data-i18n="" data-i18n-title="brawn_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons"></button>
+            </div>
+            
+            <!-- FOCUS -->
+	        <div class="sheet-focus">
+	            <input class="sheet-focus-score" type="number" name="attr_focus"/>
+	         <button type="roll" name="roll_focus" class="sheet-rollbutton sheet-focus-button" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=focus}}{{vigor_spent=?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}}}{{bonus_pen=?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}+@{focus}+?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}]]}}' data-i18n="" data-i18n-title="focus_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons"></button>
+            </div>
+	             
+         
+        </div> <!-- END left column qualities -->
+	    
+	    <!-- right column -->
+	    <div class="sheet-right-quality">
+	        <!-- GUILE -->
+	        <div class="sheet-guile">
+	            <input class="sheet-guile-score" type="number" name="attr_guile"/>
+	         <button type="roll" name="roll_guile" class="sheet-rollbutton sheet-guile-button" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=guile}}{{vigor_spent=?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}}}{{bonus_pen=?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}+@{guile}+?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}]]}}' data-i18n="" data-i18n-title="guile_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons"></button>
+            </div>
+            
+            <!-- PRESENCE -->
+	        <div class="sheet-presence">
+	            <input class="sheet-presence-score" type="number" name="attr_presence"/>
+	         <button type="roll" name="roll_presence" class="sheet-rollbutton sheet-presence-button" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=presence}}{{vigor_spent=?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}}}{{bonus_pen=?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}+@{presence}+?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}]]}}' data-i18n="" data-i18n-title="presence_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons"></button>
+            </div>
+            
+            <!-- UNDERSTANDING -->
+	        <div class="sheet-understanding">
+	            <input class="sheet-understanding-score" type="number" name="attr_understanding"/>
+	         <button type="roll" name="roll_understanding" class="sheet-rollbutton sheet-understanding-button" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=understanding}}{{vigor_spent=?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}}}{{bonus_pen=?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Choose The Odds:|Slim,2d6kl1|Fair,2d6kh1|Promising,2d6|3d6 Promising,3d6kh2|4d6 Promising,4d6kh2|5d6 Promising,5d6kh2}+@{understanding}+?{Other Modifiers (Natures, Assets, Waypoints, Etc)|0}]]}}' data-i18n="" data-i18n-title="understanding_description" title="Deftness, Evasion, Acrobatics, Ability to Accurately Use Ranged Weapons"></button>
+            </div>
+            
+        </div> <!-- END right column qualities  // END QUALITIES -->  
+	    
+	    <!-- ASSETS -->
+	    <!-- asset 1 -->
+	    <div class="sheet-asset-block1">
+	        <div class="sheet-asset-rating">
+                <input type="checkbox" value="1" name="attr_asset1_rating1"><span></span>
+                <input type="checkbox" value="2" name="attr_asset1_rating2"><span></span>
+                <input type="checkbox" value="3" name="attr_asset1_rating3"><span></span>
+                <input type="checkbox" value="4" name="attr_asset1_rating4"><span></span>
+		    </div>
+	        <input class="sheet-asset-description" type="text" name="attr_asset1"/>
+	    </div>
+	    
+	    <!-- asset 2 -->
+	    <div class="sheet-asset-block2">
+	        <div class="sheet-asset-rating">
+	            <div class="sheet-asset-hex2">
+		        <input type="checkbox" value="1" name="attr_asset2_rating1"><span></span>
+                <input type="checkbox" value="2" name="attr_asset2_rating2"><span></span>
+                <input type="checkbox" value="3" name="attr_asset2_rating3"><span></span>
+                <input type="checkbox" value="4" name="attr_asset2_rating4"><span></span>
+		        </div>
+		    </div>
+	        <input class="sheet-asset-description" type="text" name="attr_asset2"/>
+	    </div>
+	    
+	    <!-- asset 3 -->
+	    <div class="sheet-asset-block3">
+	        <div class="sheet-asset-rating">
+	            <div class="sheet-asset-hex3">
+		        <input type="checkbox" value="1" name="attr_asset3_rating1"><span></span>
+                <input type="checkbox" value="2" name="attr_asset3_rating2"><span></span>
+                <input type="checkbox" value="3" name="attr_asset3_rating3"><span></span>
+                <input type="checkbox" value="4" name="attr_asset3_rating4"><span></span>
+		        </div>
+		    </div>
+	        <input class="sheet-asset-description" type="text" name="attr_asset3"/>
+	    </div>
+	    
+	    <!-- asset 4 -->
+	    <div class="sheet-asset-block4">
+	        <div class="sheet-asset-rating">
+	            <div class="sheet-asset-hex4">
+		        <input type="checkbox" value="1" name="attr_asset4_rating1"><span></span>
+                <input type="checkbox" value="2" name="attr_asset4_rating2"><span></span>
+                <input type="checkbox" value="3" name="attr_asset4_rating3"><span></span>
+                <input type="checkbox" value="4" name="attr_asset4_rating4"><span></span>
+		        </div>
+		    </div>
+	        <input class="sheet-asset-description" type="text" name="attr_asset4"/>
+	    </div>
+	    
+	    <!-- asset 5 -->
+	    <div class="sheet-asset-block5">
+	        <div class="sheet-asset-rating">
+		        <div class="sheet-asset-hex5">
+		        <input type="checkbox" value="1" name="attr_asset5_rating1"><span></span>
+                <input type="checkbox" value="2" name="attr_asset5_rating2"><span></span>
+                <input type="checkbox" value="3" name="attr_asset5_rating3"><span></span>
+                <input type="checkbox" value="4" name="attr_asset5_rating4"><span></span>
+		        </div>
+		    </div>
+	        <input class="sheet-asset-description" type="text" name="attr_asset5"/>
+	    </div>
+	    <!-- END OF ASSETS SECTION -->
+	    
+	    
+	    <!--JOURNEY-->
+	    <div class="sheet-journey">
+	        <div class="sheet-journey-block1">
+	            <input class="sheet-journey-title" type="text" name="attr_journey1_title"/>
+	            <textarea class="sheet-waypoint-desc" rows="2" type="text" name="attr_waypoint1"></textarea>
+	        </div>
+	        
+	        <div class="sheet-journey-block2">
+	            <input class="sheet-journey-title" type="text" name="attr_journey2_title"/>
+	            <textarea class="sheet-waypoint-desc" rows="2" type="text" name="attr_waypoint2"></textarea>
+	        </div>
+	        
+	        <div class="sheet-journey-block3">
+	            <input class="sheet-journey-title" type="text" name="attr_journey3_title"/>
+	            <textarea class="sheet-waypoint-desc" rows="2" type="text" name="attr_waypoint3"></textarea>
+	        </div>
+	        
+	        <div class="sheet-journey-block4">
+	            <input class="sheet-journey-title" type="text" name="attr_journey4_title"/>
+	            <textarea class="sheet-waypoint-desc" rows="2" type="text" name="attr_waypoint4"></textarea>
+	        </div>
+	        
+	        <div class="sheet-journey-block5">
+	            <input class="sheet-journey-title" type="text" name="attr_journey5_title"/>
+	            <textarea class="sheet-waypoint-desc" rows="2" type="text" name="attr_waypoint5"></textarea>
+	        </div>
+	    </div> <!-- END OF JOURNEY SECTION -->
+	    
+	    <!-- PERSONS/POINTS OF INTEREST -->
+	    <div class="sheet-poi">
+	        <textarea class="sheet-poi-notes" rows="6" type="text" name="attr_poi_notes"></textarea>
+	    </div>
+	    
+	</div>	<!-- END RIGHT COLUMN -->
+	
+	
+	</div> <!-- END CHARACTER SHEET -->
+	
+	
+	
+	
+	
+	
+
+
+<!-- ROLL TEMPLATES -->
+<rolltemplate class="sheet-rolltemplate-vigor1">
+        <div class="{{#pc}} sheet-roll-pc{{/pc}}{{#encounter}} sheet-roll-encounter{{/encounter}}{{#npc}} sheet-roll-npc{{/npc}}{{#custom_pc}} sheet-roll-custom-pc{{/custom_pc}}">
+            <div class="sheet-roll-name">{{name}} rolls</div>
+            {{#quality}} <div class="sheet-roll-quality">{{quality}}</div> {{/quality}}
+            {{#dice}}<div class="sheet-roll-dice">{{dice}}</div>{{/dice}}
+            {{#encounter_dice}}<div class="sheet-roll-encounter-dice">{{encounter_dice}}</div>{{/encounter_dice}}
+            {{#npc_dice}}<div class="sheet-roll-npc-dice">{{npc_dice}}</div>{{/npc_dice}}
+		    <table class="sheet-roll-footer">
+		        <tr> 
+		            {{#qual_rating}}<td class="sheet-roll-qual-rating">{{qual_rating}}</td>{{/qual_rating}}
+		           <!-- {{#vigor_spent}}<td class="sheet-roll-vigor-spent">{{vigor_spent}}</td>{{/vigor_spent}}
+		            {{#asset_qual}}<td class="sheet-roll-asset-qual">{{asset_qual}}</td>{{/asset_qual}}-->
+		           {{#encounter_type}}<td colspan="3" class="sheet-roll-encounter-type">TYPE: {{encounter_type}}</td>{{/encounter_type}}
+		        </tr>
+		    </table> 
+	        {{#notes}}<div class="sheet-roll-notes">NOTES: {{notes}}</div>{{/notes}}
+	   </div>
+</rolltemplate>
+
+
+</html>
