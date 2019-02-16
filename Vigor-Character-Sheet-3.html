@@ -15,7 +15,7 @@
 				<textarea class="sheet-sketch" rows="5" type="text" name="attr_sketch"></textarea>
 		    </div>
 		    
-			<div class="sheet-bottom-margin"></div>
+		
 	
 		<!-- NATURES -->
 		<div class="sheet-natures">
@@ -40,18 +40,20 @@
 		    <div class="sheet-nature-block1">
 		        <input class="sheet-nature-description" type="text" name="attr_nature1"/>
 		        <div class="sheet-nature-rating-block">
-		            <div class="sheet-nature-tri-down">
-		            <input type="checkbox" value="ENT" name="attr_nature1_rating"><span></span>
-		            </div>
-		            <div class="sheet-nature-rating">
-                    <input type="checkbox" value="+1/-3" name="attr_nature1_rating"><span></span>
-                    <input type="checkbox" value="+2/-2" name="attr_nature1_rating"><span></span>
-                    <input type="checkbox" value="+3/-1" name="attr_nature1_rating"><span></span>
-		            </div>
-		            <div class="sheet-nature-tri-up">
-		            <input type="checkbox" value="INT" name="attr_nature1_rating"><span></span>
-		            </div>
-		            </div>
+		            
+		                <div class="sheet-nature-tri-down">
+		                    <input type="checkbox" value="ENT" name="attr_nature1_rating"><span></span>
+		                </div>
+		                <div class="sheet-nature-rating">
+                            <input type="checkbox" value="+1/-3" name="attr_nature1_rating"><span></span>
+                            <input type="checkbox" value="+2/-2" name="attr_nature1_rating"><span></span>
+                            <input type="checkbox" value="+3/-1" name="attr_nature1_rating"><span></span>
+		                </div>
+		                <div class="sheet-nature-tri-up">
+		                    <input type="checkbox" value="INT" name="attr_nature1_rating"><span></span>
+		                </div>
+		                
+		        </div>
 		    </div>
 		    
 		    <!-- NATURE 2 -->
@@ -357,11 +359,11 @@
 	    </div>
 	    <!-- OTHER ROLL BUTTONS -->
 	    <div class="sheet-dust-button">
-	        <button type="roll" name="roll_Dust" class="sheet-rollbutton sheet-dust-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=The Dust}}{{?{Keyed Quality|Agility,@{agility}|Brawn,@{brawn}|Focus,@{focus}|Guile,@{guile}|Presence,@{presence}|Understanding,@{understanding}}}}{{vigor_spent=?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6|5,5d6|6,6d6|7,7d6|8,8d6|9,9d6|10,10d6}}}{{modifier=?{Other Modifiers|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6|5,5d6|6,6d6|7,7d6|8,8d6|9,9d6|10,10d6}+(-1*(?{Keyed Quality|Agility,@agility|Brawn,@brawn|Focus,@focus|Guile,@guile|Presence,@presence|Understanding,@understanding}))+?{Other Modifiers|0}]]}}' data-i18n="" data-i18n-title="dust_description" title="Dust"></button> 
+	        <button type="roll" name="roll_Dust" class="sheet-rollbutton sheet-dust-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=The Dust}}{{?{Keyed Quality|Agility,@{agility}|Brawn,@{brawn}|Focus,@{focus}|Guile,@{guile}|Presence,@{presence}|Understanding,@{understanding}}}}{{vigor_spent=?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6|5,5d6}}}{{modifier=?{Other Modifiers|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6|5,5d6}+(-1*(?{Keyed Quality|Agility,@agility|Brawn,@brawn|Focus,@focus|Guile,@guile|Presence,@presence|Understanding,@understanding}))+(?{Other Modifiers|0})]]}}' data-i18n="" data-i18n-title="dust_description" title="Dust"></button> 
 	    </div>
 	    
 	    <div class="sheet-ato-button">
-	        <button type="roll" name="roll_ATO" class="sheet-rollbutton sheet-ato-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=Against The Odds}}}{{modifier=?{Modifier|0}}}{{notes=?{Notes|}}}{{npc_dice=[[2d6+?{Modifier|0}]]}}' data-i18n="" data-i18n-title="ato_description" title="ATO"></button> 
+	        <button type="roll" name="roll_ATO" class="sheet-rollbutton sheet-ato-roll" value='&{template:vigor1}{{pc=1}}{{name=@{character_name}}}{{quality=Change The Narrative}}{{vigor_spent=?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6}}}{{modifier=?{Other Modifiers|0}}}{{notes=?{Notes|}}}{{npc_dice=[[?{Dice Pool|1,1d6|2,2d6|3,3d6|4,4d6}+(?{Other Modifiers|0})-@{current_vigor}]]}}' data-i18n="" data-i18n-title="ato_description" title="ATO"></button> 
 	    </div>
 	    
 	    <!-- QUALITIES -->
