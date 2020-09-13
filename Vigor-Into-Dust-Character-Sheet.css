@@ -1,0 +1,1378 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica|IM+Fell+Double+Pica:ital@1|Teko:wght@500;600&display=swap');
+/* CSS Document */
+
+/**/
+/**/
+/**/
+/* GENERALITIES */
+/**/
+/**/
+/**/
+
+/* SETUP LAYOUT */
+.sheet-charsheet {
+	display: flex;
+	list-style: none;
+	flex-flow: row wrap;
+	min-width: 800px;
+	min-height: 800px;
+	padding: 25px;
+}
+
+
+.sheet-column-l {
+	display: flex;
+	list-style: none;
+	flex-flow: row nowrap;
+	width: 60%;
+	min-width: 60%;
+	margin-right: .5%;
+}
+.sheet-column-r {
+	display: flex;
+	list-style: none;
+	flex-flow: row nowrap;
+	width: 39.5%;
+	min-width: 39.5%;
+}
+.sheet-flex-container {
+	width: 100%;
+  	padding: 0;
+  	margin: 0;
+  	list-style: none;
+  	display: flex;
+  	flex-flow: column wrap;
+}
+
+.sheet-flex-rows {
+	width: 100%;
+	padding: 0;
+  	margin: 0;
+  	list-style: none;
+  	display: flex;
+  	flex-flow: row nowrap;
+}
+
+.sheet-flex-start { 
+  justify-content: flex-start; 
+}
+
+.sheet-flex-end { 
+  justify-content: flex-end; 
+}  
+
+.sheet-center { 
+  justify-content: center; 
+}  
+
+.sheet-space-between { 
+  justify-content: space-between; 
+}  
+
+.sheet-space-around { 
+  justify-content: space-around; 
+}
+
+.sheet-space-evenly { 
+  justify-content: space-evenly; 
+}
+
+
+/* HIDE UP/DOWN ARROWS ON NUMBER INPUTS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* GLOBAL CHECKBOX/RADIO HIDING */
+input[type=checkbox],
+input[type=radio] {
+	opacity: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+
+input[type=checkbox] + span,
+input[type=radio] + span {
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+
+/* GLOBAL INPUT STYLES */
+input[type=text] {
+	border: none;
+	border-bottom: 1px solid #3b3b3b;
+	background: none;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 14px;
+	border-radius: 0;
+}
+
+input[type=number] {
+	border: none;
+	background: #ffffff;
+	font-family: 'Teko', sans-serif;
+	font-size: 1em;
+	text-align: center;
+	height: auto;
+}
+
+
+
+/********************************/
+/* CHARACTER INFO SECTION */
+/********************************/
+
+.sheet-character-info-box {
+	background: #ffffff;
+	outline: 1px solid #3b3b3b;
+	outline-style: solid;
+	margin: 10px 5px 5px 1px;
+	padding: 5px 0px 0px 10px;
+	width: auto;
+	height: auto;
+}
+
+.sheet-lead input {
+	width: 50%;
+	border-radius: 0;
+	font-size: 18px;
+	text-indent: 10px;
+	margin-top: -5px;
+	height: 16px;
+}
+.sheet-lead-label {
+	color: #3b3b3b;
+  	font-size: 2em;
+	letter-spacing: 1px;
+	font-family: 'Teko', sans-serif;
+  	text-align: left;
+}
+
+.sheet-sketch textarea {
+	width: 65%;
+	background-image: -webkit-linear-gradient(left, white 10px, transparent 10px), -webkit-linear-gradient(right, white 10px, transparent 10px), -webkit-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: -moz-linear-gradient(left, white 10px, transparent 10px), -moz-linear-gradient(right, white 10px, transparent 10px), -moz-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: -ms-linear-gradient(left, white 10px, transparent 10px), -ms-linear-gradient(right, white 10px, transparent 10px), -ms-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: -o-linear-gradient(left, white 10px, transparent 10px), -o-linear-gradient(right, white 10px, transparent 10px), -o-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: linear-gradient(left, white 10px, transparent 10px), linear-gradient(right, white 10px, transparent 10px), linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-size: 100% 70%, 100% 70%, 100% 14px;
+    border: 0px solid #ccc;
+    box-shadow: none;
+    line-height: 14px;
+    font-family: 'IM Fell Double Pica', serif;
+	font-size: 12px;
+    height: 6em;
+	vertical-align: text-top;
+	resize: none;
+	padding-left: 9px;
+	border-radius: 0;
+}
+
+.sheet-sketch-label {
+	color: #3b3b3b;
+  	font-size: 1.25em;
+	font-family: 'Teko', sans-serif;
+  	text-align: left;
+	vertical-align: text-top;
+}
+
+.sheet-vigor-icon {
+	width: auto;
+	max-width: 20%;
+	height: auto;
+	z-index: 2;
+	margin-top: -50%;
+	margin-left: 76%;
+	vertical-align: text-bottom;
+}
+
+/********************************/
+/* ROLEPLAY PROMPTS SECTION */
+/********************************/
+
+.sheet-black-header {
+  	background: #3b3b3b;
+  	padding: 2px 0px 2px 10px;
+  	width: calc(100% - 14px);
+  	height: 30px;
+  	color: #ffffff;
+  	font-size: 2em;
+	letter-spacing: 2px;
+	font-family: 'Teko', sans-serif;
+  	text-align: left;
+}
+
+.sheet-heart {
+	max-width: 30px;
+	max-height: 25px;
+	float: right;
+	vertical-align: text-top;
+	margin-top: 1px;
+	margin-right: 50px;
+}
+
+.sheet-heart-label {
+	color: #ffffff;
+	font-size: .5em;
+	letter-spacing: 0;
+	vertical-align: text-top;
+	text-align: right;
+	margin-right: 5px;
+	float: right;
+}
+.sheet-rpp-box {
+	background: #ffffff;
+	outline: 1px solid #3b3b3b;
+	margin: 0px 5px 5px 2px;
+	padding: 5px 0px 0px 0px;
+	width: auto;
+	height: auto;
+
+}
+
+.sheet-threads-label {
+	font-family: 'Teko', sans-serif;
+	text-align: left;
+	color: #3b3b3b;
+	margin-left: 5px;
+}
+
+.sheet-threads {
+	width: 100%;
+	height: auto;
+	margin: 0px 0px 0px 10px;
+	padding-left: 5px;
+}
+
+.sheet-threads input {
+	text-align: left;
+	width: calc(90% - 10px);
+	outline: none;
+	padding-right: 10px;
+	margin-left: -12px;
+	padding-left: 20px;
+	font-size: 13px;
+    height: 12px;
+	
+}
+
+.sheet-natures-background {
+	background: #cdcdcd;
+	width: 100%;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+
+.sheet-natures-label {
+	font-family: 'Teko', sans-serif;
+	text-align: left;
+	color: #3b3b3b;
+	margin-left: 5px;
+}
+
+.sheet-natures {
+	margin: 0px 3px 0px 10px;
+	width: 100%;
+	height: auto;
+	padding-left: 5px;
+}
+
+.sheet-natures input {
+	text-align: left;
+	width: calc(90% - 10px);
+	outline: none;
+	padding-right: 10px;
+	margin-left: -12px;
+	padding-left: 20px;
+	font-size: 13px;
+    height: 12px;
+}
+
+
+.sheet-roots-background {
+	background: #ffffff;
+	width: 100%;
+	height: auto;
+	margin-bottom: 5px;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+
+
+.sheet-roots-label {
+	font-family: 'Teko', sans-serif;
+	text-align: left;
+	color: #3b3b3b;
+	margin-left: 5px;
+}
+
+.sheet-roots {
+	width: 100%;
+	height: auto;
+	margin: 0px 0px 0px 10px;
+	padding-left: 5px;
+}
+
+.sheet-roots input {
+	text-align: left;
+	width: calc(90% - 10px);
+	outline: none;
+	padding-right: 10px;
+	margin-left: -12px;
+	padding-left: 20px;
+	font-size: 13px;
+    height: 12px;
+}
+
+/********************************/
+/* CORRUPTION SECTION */
+/********************************/
+
+.sheet-corruption-box {
+	margin: 20px 5px 5px 2px;
+	padding: 1px 0px 0px 8px;
+	width: auto;
+	height: 5.75em;
+	outline: 1px solid #999999;
+	border-top: 7px solid #999999;
+}
+
+.sheet-corruption-label {
+	background-color: #999999;
+	outline: 1px solid #999999;
+	outline-style: solid;
+	width: 25%;
+	height: 30px;
+}
+
+.sheet-corruption-text {
+	width: 55%;
+	height: 4em;
+	max-height: 4em;
+	vertical-align: text-top;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	resize: none;
+	margin-top: -5px;
+	margin-left: 5px;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 14px;
+}
+
+.sheet-corruption-icon {
+	width: 79px;
+	margin-top: -51px;
+    margin-left: -6px;
+    position: relative;
+}
+
+input.sheet-corruption-effect {
+   opacity: 0%;
+	width: 70px;
+    height: 70px;
+    margin-top: -45px;
+    margin-left: -3px;
+    position: absolute;
+    z-index: 1;
+}
+
+span.sheet-corruption-effect {
+    margin: 0px 0 0 0px;
+    display: none;
+}
+
+input.sheet-zero-effect { z-index: 2; }
+
+input.sheet-zero-effect:checked + input.sheet-one-effect,
+input.sheet-one-effect:checked + input.sheet-two-effect,
+input.sheet-two-effect:checked + input.sheet-three-effect,
+input.sheet-three-effect:checked + input.sheet-four-effect { z-index: 3; }
+
+input.sheet-zero-effect:checked ~ span.sheet-zero-effect,
+input.sheet-one-effect:checked ~ span.sheet-one-effect,
+input.sheet-two-effect:checked ~ span.sheet-two-effect,
+input.sheet-three-effect:checked ~ span.sheet-three-effect,
+input.sheet-four-effect:checked ~ span.sheet-four-effect { display: inline-block; }
+
+
+.sheet-corruption-effect .sheet-zero-effect,
+.sheet-corruption-effect .sheet-one-effect,
+.sheet-corruption-effect .sheet-two-effect,
+.sheet-corruption-effect .sheet-three-effect,
+.sheet-corruption-effect .sheet-four-effect {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.sheet-corruption-track {
+	width: 31%;
+	margin-left: 58px;
+	margin-top: -20px;
+	font-family: 'Teko', sans-serif;
+  	text-align: left;
+  	color: #999999;
+  	font-size: 18px;
+}
+
+.sheet-asset-box { 
+	margin-top: -26px;
+    margin-left: 45px;
+    padding-bottom: 0px;
+    z-index: 4;
+}
+
+/* HEX RADIO/CHECKBOX STYLING */
+.sheet-asset-box input[type="radio"] + span::before,
+.sheet-asset-box input[type="checkbox"] + span::before,
+.sheet-qualities-rating-hex input[type="radio"] + span::before,
+.sheet-qualities-rating-hex input[type="checkbox"] + span::before,
+.sheet-pack-type-hex-l input[type="radio"] + span::before,
+.sheet-pack-type-hex-l input[type="checkbox"] + span::before,
+.sheet-pack-type-hex-r input[type="radio"] + span::before,
+.sheet-pack-hexes input[type="checkbox"] + span::before,
+.sheet-pack-hexes input[type="radio"] + span::before,
+.sheet-pack-heavy-hex input[type="checkbox"] + span::before,
+.sheet-pack-type-hex-r input[type="checkbox"] + span::before {
+    margin-right: 0px;
+    border: solid 0px transparent;
+    line-height: 11px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Assets/Asset-Hex-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Hide actual radios/checkboxes */
+.sheet-asset-box input[type=checkbox],
+.sheet-pack-type-hex-l input[type=checkbox],
+.sheet-pack-type-hex-r input[type=checkbox],
+.sheet-pack-hexes input[type=checkbox],
+.sheet-pack-heavy-hex input[type=checbox],
+.sheet-qualities-rating-hex input[type=checkbox]{
+    opacity: 0%;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin: 0px -0px 0px 0px;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.2s;
+}
+
+/* HEX RADIOS */
+.sheet-asset-box input[type="radio"] + span::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    font-size: 0px;
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Assets/Asset-Hex-02.png);
+    background-size: contain;
+}
+
+.sheet-asset-box input[type="radio"]:checked ~ .sheet-asset-box input[type="radio"] + span::before {
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Assets/Asset-Hex-01.png);
+    background-size: contain;
+}
+
+/* HEX CHECKBOXES */
+.sheet-asset-box input[type="checkbox"] + span::before,
+.sheet-pack-type-hex-l input[type="checkbox"] + span::before,
+.sheet-pack-type-hex-r input[type="checkbox"] + span::before,
+.sheet-pack-hexes input[type="checkbox"] + span::before,
+.sheet-pack-heavy-hex input[type="checkbox"] + span::before,
+.sheet-qualities-rating-hex input[type="checkbox"] + span::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+	margin-left: -16px;
+}
+
+.sheet-asset-box input[type="checkbox"]:checked + span::before,
+.sheet-pack-type-hex-l input[type="checkbox"]:checked + span::before,
+.sheet-pack-type-hex-r input[type="checkbox"]:checked + span::before,
+.sheet-pack-hexes input[type="checkbox"]:checked + span::before,
+.sheet-pack-heavy-hex input[type="checkbox"]:checked + span::before,
+.sheet-qualities-rating-hex input[type="checkbox"]:checked + span::before {
+    background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Assets/Asset-Hex-02.png);
+    background-size: contain;
+}
+
+/********************************/
+/* CONDITIONS SECTION */
+/********************************/
+
+.sheet-conditions-section {
+	width: 100%;
+	height: auto;
+	min-height: 6em;
+	padding: 0px;
+}
+
+.sheet-conditions-label {
+	width: 40px;
+	height: auto;
+	min-height: 8em;
+	background: #999999;
+	margin-top: 5px;
+}
+
+.sheet-rotate {
+    transform: rotate(90deg);
+    transform-origin: right, top;
+    -ms-transform: rotate(90deg);
+    -ms-transform-origin:right, top;
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin:right, top;
+    position: absolute; 
+    color: #ffffff;
+	font-family: 'Teko', sans-serif;
+	font-size: 2.5em;
+	margin-left: -39px;
+	margin-top: 65px;
+}
+
+.sheet-conditions-box {
+	width: calc((100% / 4) - 13px);
+	height: auto;
+	min-height: 8em;
+	border: #999999 solid 1px;
+	border-top: #999999 solid 40px;
+	margin-top: 5px;
+}
+
+.sheet-d6-icon {
+	font-family: 'dicefontd6';
+	font-size: 1.5em;
+	font-weight: 800;
+	color: #ffffff;
+	position: absolute;
+	margin-top: -35px;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+}
+
+.sheet-edge-of-death {
+	font-family: 'Teko', sans-serif;
+	font-size: 1.25em;
+	min-width: 100%;
+	line-height: 12px;
+	color: #ffffff;
+	position: absolute;
+	margin-top: -25px;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+textarea.sheet-condition-desc {
+	width: 93%;
+	padding: 2px;
+	margin: 5px 2px 0 2px;
+	height: 4em;
+	min-height: 4em;
+	resize: none;
+	border: none;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 13px;
+	border-radius: 0;
+}
+
+/*CONDITIONS RECOVERY HEXES*/
+.sheet-recovery-1,
+.sheet-recovery-2,
+.sheet-recovery-3,
+.sheet-recovery-4 {
+	width: auto;
+    margin-right: 2px;
+	margin-bottom: 2px;
+    position: relative;
+	float: right;
+}
+
+input.sheet-recovery-hex {
+   opacity: 0;
+	width: 30px;
+    height: 40px;
+    margin-top: -0px;
+    margin-left: -0px;
+    position: absolute;
+    z-index: 1;
+}
+
+span.sheet-recovery-hex {
+    margin: 0px 0 0 0px;
+    display: none;
+}
+
+input.sheet-zero-recovery { z-index: 2; }
+
+input.sheet-zero-recovery:checked + input.sheet-one-recovery,
+input.sheet-one-recovery:checked + input.sheet-two-recovery { z-index: 3; }
+
+input.sheet-zero-recovery:checked ~ span.sheet-zero-recovery,
+input.sheet-one-recovery:checked ~ span.sheet-one-recovery,
+input.sheet-two-recovery:checked ~ span.sheet-two-recovery { display: inline-block; }
+
+
+.sheet-recovery-hex .sheet-zero-recovery,
+.sheet-recovery-hex .sheet-one-recovery,
+.sheet-recovery-hex .sheet-two-recovery {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+/**/
+/**/
+/**/
+/* RIGHT COLUMN STYLES */
+/**/
+/**/
+/**/
+
+
+/********************************/
+/* VIGOR SECTION */
+/********************************/
+
+.sheet-vigor-box {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.sheet-vigor-header {
+  	background: #3b3b3b;
+  	padding: 10px 5px 0px 20px;
+	margin-top: -1px;
+  	height: 50px;
+  	color: #ffffff;
+  	font-size: 4em;
+	line-height: 1em;
+	letter-spacing: 4px;
+	font-family: 'Teko', sans-serif;
+  	text-align: left;
+	vertical-align: middle;
+}
+
+.sheet-vigor-header input[type="number"] {
+	font-size: .55em;
+	padding-top: 10px;
+}
+
+.sheet-vigor-numbers {
+	max-width: 30px;
+	max-height: 25px;
+	float: right;
+	vertical-align: text-bottom;
+	margin-top: 10px;
+	margin-right: 8px;
+}
+
+.sheet-vigor-number-label {
+	color: #ffffff;
+	font-size: .35em;
+	letter-spacing: 0;
+	vertical-align: middle;
+	text-align: right;
+	margin-right: 5px;
+	margin-top: 0px;
+	float: right;
+}
+
+
+/********************************/
+/* QUALITIES SECTION */
+/********************************/
+
+.sheet-qualities-box {
+	width: 100%;
+	margin-top: 5px;
+	background: #999999;
+	height: auto;
+}
+
+.sheet-qualities-header {
+	font-family: 'Teko', sans-serif;
+	color: #ffffff;
+	font-size: 2.25em;
+	float: right;
+	margin-right: 13px;
+	margin-top: 5px;
+}
+
+.sheet-qualities-rating-label {
+	font-family: 'Teko', sans-serif;
+	color: #ffffff;
+	font-size: 1.25em;
+	float: left;
+	margin-left: 35px;
+	margin-top: 18px;
+	vertical-align: text-top;
+}
+
+.sheet-qualities-line-holder {
+	margin-top:42px;
+	padding-bottom: 8px;
+}
+
+.sheet-qualities-line {
+	background: #ffffff;
+	margin-top: 3px;
+	margin-left: 8px;
+	width: 95%;
+}
+
+.sheet-qualities-label {
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1.5em;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+.sheet-qualities-rating-hex { 
+    margin-left: 8px;
+    padding-bottom: 0px;
+    z-index: 4;
+}
+
+
+/********************************/
+/* ASSETS SECTION */
+/********************************/
+.sheet-assets-holder {
+	margin-top: 7px;
+	padding-top: 5px;
+	width: 100%;
+	background: #999999;
+	height: auto;
+}
+
+.sheet-assets-grid {
+	display: grid;
+	grid-template-columns: 70px 60px auto auto auto; 
+	grid-template-rows: 40px 20px 17px 17px 17px 25px;
+}
+
+.sheet-assets-header {
+	font-family: 'Teko', sans-serif;
+	color: #ffffff;
+	font-size: 2.25em;
+	float: right;
+	margin-right: 10px;
+	grid-column-start: 5;
+	grid-column-end: 6;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: end;
+	align-self: start;
+}
+
+.sheet-pack-background {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 8;
+	background: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Assets/Assets-Pack1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 5px;
+	margin-right: 7px;
+	margin-bottom: 10px;
+}
+
+.sheet-pack-header {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	align-self: start;
+	justify-self: center;
+	margin-top: 10px;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 2em;
+}
+
+
+.sheet-pack-type-bind {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	align-self: start;
+	justify-self: end;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-right: 10px;
+	
+}
+
+.sheet-pack-type-cuff {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	align-self: start;
+	justify-self: end;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-right: 10px;	
+
+}
+
+.sheet-pack-type-fold {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 5;
+	grid-row-end: 6;
+	align-self: start;
+	justify-self: end;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-right: 10px;
+
+}
+
+.sheet-pack-type-hook {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 6;
+	grid-row-end: 7;
+	align-self: start;
+	justify-self: end;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-right: 10px;
+}
+
+.sheet-pack-type-point {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	align-self: start;
+	justify-self: start;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-left: 1px;
+}
+
+.sheet-pack-type-seam {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	align-self: start;
+	justify-self: start;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-left: 1px;
+}
+
+.sheet-pack-type-sift {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 5;
+	grid-row-end: 6;
+	align-self: start;
+	justify-self: start;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1em;
+	display: flex;
+	margin-left: 1px;
+}
+
+.sheet-pack-type-label-r {
+	margin-left: 3px;
+}
+
+.sheet-pack-type-hex-l {
+	margin-left: 5px;
+}
+
+.sheet-pack-hexes {
+	grid-column-start: 3;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: start;
+	align-self: end;
+	display: flex;
+}
+
+.sheet-pack-heavy {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	justify-self: start;	
+	align-self: start;
+	margin-top: 5px;
+	font-family: 'Teko', sans-serif;
+	font-size: 1.25em;
+	color: #ffffff;
+	line-height: 1em;
+	margin-left: 60px;
+}
+
+.sheet-heavy-hex-divider {
+	font-family: 'Teko', sans-serif;
+	font-size: 1em;
+	color: #ffffff;
+	line-height: 1.5em;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.sheet-packed-assets {
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 5;
+	margin-right: 5px;
+}
+
+.sheet-prized-assets {
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 5;
+	grid-row-end: 8;
+	margin-top: 12px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+}
+.sheet-packed-assets textarea {
+	background-image: -webkit-linear-gradient(left, white 10px, transparent 10px), -webkit-linear-gradient(right, white 10px, transparent 10px), -webkit-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: -moz-linear-gradient(left, white 10px, transparent 10px), -moz-linear-gradient(right, white 10px, transparent 10px), -moz-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: -ms-linear-gradient(left, white 10px, transparent 10px), -ms-linear-gradient(right, white 10px, transparent 10px), -ms-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: -o-linear-gradient(left, white 10px, transparent 10px), -o-linear-gradient(right, white 10px, transparent 10px), -o-linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-image: linear-gradient(left, white 10px, transparent 10px), linear-gradient(right, white 10px, transparent 10px), linear-gradient(white 13px, #ccc 13px, #ccc 14px, white 14px);
+    background-size: 100% 70%, 100% 70%, 100% 14px;
+    border: 0px solid #ccc;
+    box-shadow: none;
+    line-height: 14px;
+    font-family: 'IM Fell Double Pica', serif;
+	font-size: 12px;
+    height: 3em;
+	width: 92%;
+	margin-top: 5px;
+	vertical-align: text-top;
+	resize: none;
+	padding-left: 9px;
+	border-radius: 0;
+}
+
+.sheet-prized-assets textarea {
+	background-image: -webkit-linear-gradient(left, #eaeaea 10px, transparent 10px), -webkit-linear-gradient(right, #eaeaea 10px, transparent 10px), -webkit-linear-gradient(#eaeaea 13px, #999999 13px, #999999 14px, #eaeaea 14px);
+    background-image: -moz-linear-gradient(left, #eaeaea 10px, transparent 10px), -moz-linear-gradient(right, #eaeaea 10px, transparent 10px), -moz-linear-gradient(#eaeaea 13px, #999999 13px, #999999 14px, #eaeaea 14px);
+    background-image: -ms-linear-gradient(left, #eaeaea 10px, transparent 10px), -ms-linear-gradient(right, #eaeaea 10px, transparent 10px), -ms-linear-gradient(#eaeaea 13px, #999999 13px, #999999 14px, #eaeaea 14px);
+    background-image: -o-linear-gradient(left, #eaeaea 10px, transparent 10px), -o-linear-gradient(right, #eaeaea 10px, transparent 10px), -o-linear-gradient(#eaeaea 13px, #999999 13px, #999999 14px, #eaeaea 14px);
+    background-image: linear-gradient(left, #eaeaea 10px, transparent 10px), linear-gradient(right, #eaeaea 10px, transparent 10px), linear-gradient(#eaeaea 13px, #999999 13px, #999999 14px, #eaeaea 14px);
+    background-size: 100% 70%, 100% 70%, 100% 14px;
+    border: 0px solid #999999;
+    box-shadow: none;
+    line-height: 14px;
+    font-family: 'IM Fell Double Pica', serif;
+	font-size: 12px;
+    height: 3.9em;
+	width: 92%;
+	vertical-align: text-top;
+	resize: none;
+	margin-top: -10px;
+	padding-left: 9px;
+	border-radius: 0;
+}
+/********************************/
+/* WAYPOINTS SECTION */
+/********************************/
+
+.sheet-waypoints-holder {
+	margin-top: 7px;
+	width: 100%;
+	background: #999999;
+	height: auto;
+}
+
+.sheet-waypoints-header {
+	font-family: 'Teko', sans-serif;
+	color: #ffffff;
+	font-size: 3em;
+	text-align: left;
+	margin-right: 30%;
+	margin-left: 30%;
+}
+
+.sheet-waypoint-one {
+	height: auto;
+	width: 100%;
+	margin-bottom: 3px;
+}
+
+.sheet-waypoints-dropdown {
+	width: 25%;
+	height: auto;
+	margin-left: 8px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	border-radius: 0;
+}
+
+.sheet-waypoints-dropdown select {
+  	font-family: 'Teko', sans-serif;
+	font-size: 1.25em;
+	color: #999999;
+	background-color: #ffffff;
+	width: 100%;
+	height: 50px;
+	padding-left: 5px;
+	border: none;
+	outline: none;
+	border-radius: 0;
+}
+
+textarea.sheet-waypoints-desc {
+	width: 69%;
+	border: none;
+	resize: none;
+	margin-right: 8px;
+	height: 42px;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 12px;
+	color: #000000;
+	border-radius: 0;
+	
+}
+
+.repeating_waypoint {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+/********************************/
+/* PERSONS/POINTS OF INTEREST */
+/********************************/
+
+.sheet-poi-holder {
+	margin-top: 7px;
+	width: 100%;
+	background: #999999;
+	height: auto;
+}
+
+.sheet-poi-label {
+	font-family: 'Teko', sans-serif;
+	color: #ffffff;
+	font-size: 1em;
+	text-align: left;
+	margin-left: 8px;
+	margin-top: 5px;
+}
+
+textarea.sheet-poi-text {
+	width: 92%;
+	margin-left: 8px;
+	margin-right: 8px;
+	margin-bottom: 3px;
+	height: 69px; /*nice*/
+	min-height: 69px;
+	border: none;
+	resize: none;
+	padding: 5px;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 12px;
+	color: #000000;
+	border-radius: 0;
+}
+
+/**/
+/**/
+/**/
+/* ROLL BUTTONS AND TEMPLATES */
+/**/
+/**/
+/**/
+
+button {
+	text-shadow: none !important;
+}
+
+/********************************/
+/* QUALITIES ROLL BUTTONS */
+/********************************/
+
+button[type=roll].sheet-quality-button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	padding: 0;
+	margin-top: 2px;
+}
+
+.sheet-quality-button {
+    cursor: pointer;
+	font-family: 'Teko', sans-serif;
+	color: #999999;
+	font-size: 1.5em;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+button[type=roll].sheet-corruption-button {
+	border: none;
+	background: #999999;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+	text-transform: uppercase;
+	padding: 0;
+	font-size: 2em;
+	margin-left: 55px;
+	margin-top: -3px;
+}
+
+.sheet-corruption-button {
+    cursor: pointer;
+    font-family: 'Teko', sans-serif;
+    color: #ffffff;
+}
+
+button[type=roll].sheet-quality-button:hover,
+button[type=roll].sheet-corruption-button:hover { 
+	color: #dcba2b;
+}
+
+button[type=roll].sheet-quality-button::before,
+button[type=roll].sheet-corruption-button::before { content: ''; }
+
+/* ACTION ROLL TEMPLATE */
+
+/* Containter & Background */
+.sheet-rolltemplate-action_roll {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 300px;
+    height: 258px;
+    overflow: hidden;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Action-Roll-Background.png);
+	background-size: contain;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto; 
+	grid-template-rows: 18px 40px 80px 60px 70px;
+	margin-top: 20px;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-name {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+	justify-self: center;
+	align-self: center;
+	color: #000000;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 16px;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-quality {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+	text-transform: uppercase;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 2px;
+	font-size: 40px;
+	margin-top: 10px;
+	color: #000000;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-tos {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+	justify-self: center;
+	align-self: center;
+	margin-top: 20px;
+	text-transform: uppercase;
+	color: #ffffff;
+	font-family: 'Teko', sans-serif;
+	font-style: italic;
+	font-size: 70px;
+	text-shadow: 0px 0px 10px #969696, 0px 0px 13px #000000;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-dice {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    align-self: center;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-success {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Teko', sans-serif;
+	font-size: 24px;
+	font-style: italic;
+	text-align: left;
+	color: #ffffff;
+	text-shadow: 0px 0px 10px #969696, 0px 0px 13px #000000;
+	margin-left: 4px;
+}
+
+.sheet-rolltemplate-action_roll .sheet-roll-action-subtitle {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
+    align-self: start;
+	font-family: 'IM Fell Double Pica', serif;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 13px;
+    color: #ffffff;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+}
+
+
+/* CORRUPTION ROLL*/
+
+.sheet-rolltemplate-corruption_roll {
+    margin-left: -45px;
+    margin-right: -1px;
+    width: 300px;
+    height: 178px;
+    overflow: hidden;
+	background-image: url(https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption-Roll-Background.png);
+	background-size: contain;
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-roll-corruption-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto; 
+	grid-template-rows: 18px 50px 50px 60px;
+	margin-top: 10px;
+
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-roll-corruption-name {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+	justify-self: center;
+	align-self: end;
+	color: #ffffff;
+	font-family: 'IM Fell Double Pica', serif;
+	font-size: 16px;
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-roll-corruption-title {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+	text-transform: uppercase;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 2px;
+	font-size: 40px;
+	color: #ffffff;
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-roll-corruption-dice {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    justify-self: center;
+    align-self: center;
+}
+
+.sheet-rolltemplate-corruption_roll .inlinerollresult,
+.sheet-rolltemplate-action_roll .inlinerollresult {
+    border: 0px solid white !important;
+	  background-color: transparent;      
+	  font-family: 'Teko', sans-serif;
+	  font-size: 42px;
+	  text-align: left;
+	  color: #ffffff;
+	  text-shadow: 0px 0px 10px #969696, 0px 0px 13px #000000;
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-comma {
+    border: 0px solid white !important;
+	background-color: transparent;      
+	font-family: 'Teko', sans-serif;
+	font-size: 28px;
+	text-align: left;
+	color: #ffffff;
+	text-shadow: 0px 0px 10px #969696, 0px 0px 13px #000000;
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-roll-corruption-footer {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    align-self: start;
+}
+
+.sheet-rolltemplate-corruption_roll .sheet-roll-corruption-steals {
+	font-family: 'IM Fell Double Pica', serif;
+	text-transform: italic;
+    font-size: 12px;
+    line-height: 13px;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+/* Dice roll commas */
+.sheet-rolltemplate-corruption_roll .sheet-comma:last-child {
+		display: none;
+}
+
