@@ -1,0 +1,484 @@
+<!doctype html>
+<html>
+
+<!--BEGIN CHARACTER SHEET-->
+<div class="sheet-charsheet">
+	
+<!--START LEFT COLUMN-->
+<div class="sheet-column-l">
+	<div class="sheet-flex-container sheet-flex-start">
+	
+	<!-------------------------->
+	<!--CHARACTER INFO SECTION-->
+	<!-------------------------->
+	<div class="sheet-flex-container sheet-flex-start">
+		<div class="sheet-character-info-box">
+			<div class="sheet-lead">
+			<span class="sheet-lead-label">LEAD</span>
+				<input type="text" name="attr_name">
+			</div>
+			<div class="sheet-sketch">
+				<span class="sheet-sketch-label">SKETCH</span>
+				<textarea class="sheet-sketch" name="attr_sketch"></textarea>
+			</div>
+			<div>
+			<img class="sheet-vigor-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Lead%20Info/Vigor-Icon.gif" alt="Vigor Icon">
+			</div>
+		</div>
+	</div>
+	<!-------------------------->		
+	<!--ROLEPLAY PROMPTS SECTION-->
+	<!-------------------------->
+	<div class="sheet-flex-container sheet-flex-start">
+  		<div class="sheet-black-header">
+			<span>ROLEPLAY PROMPTS</span>
+			<input class="sheet-heart" name="attr_heart" type="number" value="0">
+			<span class="sheet-heart-label">HEART</span>
+		</div>
+		<div class="sheet-flex-container sheet-rpp-box">
+			<!--THREADS-->
+				<span class="sheet-threads-label">THREADS</span>
+				<div class="sheet-threads-label sheet-threads">
+					<span>1)</span>
+					<input type="text" name="attr_thread1">
+				</div>
+				<div class="sheet-threads-label sheet-threads">
+					<span>2)</span>
+					<input type="text" name="attr_thread2">
+				</div>
+				<div class="sheet-threads-label sheet-threads">
+					<span>3)</span>
+					<input type="text" name="attr_thread3">
+				</div>
+			<!--NATURES-->
+			<div class="sheet-natures-background">	
+				<span class="sheet-natures-label">NATURES</span>
+				<div class="sheet-natures-label sheet-natures">
+					<span>1)</span>
+					<input type="text" name="attr_nature1">
+				</div>
+				<div class="sheet-natures-label sheet-natures">
+					<span>2)</span>
+					<input type="text" name="attr_nature2">
+				</div>
+				<div class="sheet-natures-label sheet-natures">
+					<span>3)</span>
+					<input type="text" name="attr_nature3">
+				</div>
+			</div>
+			<!--ROOTS-->
+			<div class="sheet-roots-background">	
+				<span class="sheet-roots-label">ROOTS</span>
+				<div class="sheet-roots-label sheet-roots">
+					<span>1)</span>
+					<input type="text" name="attr_root1">
+				</div>
+				<div class="sheet-roots-label sheet-roots">
+					<span>2)</span>
+					<input type="text" name="attr_root2">
+				</div>
+				<div class="sheet-roots-label sheet-roots">
+					<span>3)</span>
+					<input type="text" name="attr_root3">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-------------------------->
+	<!--CORRUPTION SECTION-->
+	<!-------------------------->
+	<div class="sheet-flex-container sheet-flex-start">
+		<div class="sheet-corruption-box">
+		<button type="roll" name="roll_corruption" class="sheet-corruption-label sheet-corruption-button" value="&{template:corruption_roll}{{name=@{character_name}}}{{corruption_dice1=[[@{corruption-track-1}d6]]}}{{corruption_dice2=[[@{corruption-track-2}d6]]}}{{corruption_dice3=[[@{corruption-track-3}d6]]}}{{corruption_dice4=[[@{corruption-track-4}d6]]}}" title="Click to Roll for 'The Corruption Steals'">CORRUPTION</button>
+			<textarea class="sheet-corruption-text" name="attr_corruption-effect-desc" placeholder="Corruption Effect(s) Description"></textarea>
+			<div class="sheet-corruption-icon">
+            	<input type="radio" class="sheet-corruption-effect sheet-zero-effect" name="attr_corruption-effect" value="0" checked>
+				<input type="radio" class="sheet-corruption-effect sheet-one-effect" name="attr_corruption-effect" value="1">
+                <input type="radio" class="sheet-corruption-effect sheet-two-effect" name="attr_corruption-effect" value="2">
+                <input type="radio" class="sheet-corruption-effect sheet-three-effect" name="attr_corruption-effect" value="3">
+                <input type="radio" class="sheet-corruption-effect sheet-four-effect" name="attr_corruption-effect" value="4">
+
+                <span class="sheet-corruption-effect sheet-zero-effect"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Track-01.png"></span>
+                <span class="sheet-corruption-effect sheet-one-effect"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Track-02.png"></span>
+                <span class="sheet-corruption-effect sheet-two-effect"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Track-03.png"></span>
+                <span class="sheet-corruption-effect sheet-three-effect"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Track-04.png"></span>
+                <span class="sheet-corruption-effect sheet-four-effect"><img class="sheet-corruption-icon" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Track-05.png"></span>
+			</div>
+			
+			<div class="sheet-corruption-track">
+			<span>TRACK</span>
+ 				<div class="sheet-asset-box">
+                	<input type="checkbox" value="1" name="attr_corruption-track-1"><span></span>
+                	<input type="checkbox" value="1" name="attr_corruption-track-2"><span></span>
+                	<input type="checkbox" value="1" name="attr_corruption-track-3"><span></span>
+                	<input type="checkbox" value="1" name="attr_corruption-track-4"><span></span>
+		    	</div>
+			</div>
+	</div>
+		
+	<!-------------------------->
+	<!--CONDITIONS SECTION-->
+	<!-------------------------->
+	<div class="sheet-flex-container sheet-flex-start">
+		<div class="sheet-flex-rows sheet-conditions-section">
+			<div class="sheet-conditions-label">
+			<span class="sheet-rotate">CONDITIONS</span>
+			</div>
+			<div class="sheet-conditions-box">
+			<span class="sheet-d6-icon">-A</span>
+			<textarea class="sheet-condition-desc" name="attr_condition1"></textarea>
+			<div class="sheet-recovery-1">
+            	<input type="radio" class="sheet-recovery-hex sheet-zero-recovery" name="attr_cond1-recovery" value="0" checked>
+				<input type="radio" class="sheet-recovery-hex sheet-one-recovery" name="attr_cond1-recovery" value="1">
+                <input type="radio" class="sheet-recovery-hex sheet-two-recovery" name="attr_cond1-recovery" value="2">
+
+                <span class="sheet-recovery-hex sheet-zero-recovery"><img class="sheet-recovery-1" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-01.png"></span>
+				<span class="sheet-recovery-hex sheet-one-recovery"><img class="sheet-recovery-1" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-02.png"></span>
+				<span class="sheet-recovery-hex sheet-two-recovery"><img class="sheet-recovery-1" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-03.png"></span>  
+			</div>
+			</div>
+			<div class="sheet-conditions-box">
+			<span class="sheet-d6-icon">-A</span>
+			<textarea class="sheet-condition-desc" name="attr_condition2"></textarea>
+			<div class="sheet-recovery-2">
+            	<input type="radio" class="sheet-recovery-hex sheet-zero-recovery" name="attr_cond2-recovery" value="0" checked>
+				<input type="radio" class="sheet-recovery-hex sheet-one-recovery" name="attr_cond2-recovery" value="1">
+                <input type="radio" class="sheet-recovery-hex sheet-two-recovery" name="attr_cond2-recovery" value="2">
+
+                <span class="sheet-recovery-hex sheet-zero-recovery"><img class="sheet-recovery-2" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-01.png"></span>
+				<span class="sheet-recovery-hex sheet-one-recovery"><img class="sheet-recovery-2" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-02.png"></span>
+				<span class="sheet-recovery-hex sheet-two-recovery"><img class="sheet-recovery-2" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-03.png"></span>  
+			</div>
+			</div>
+			<div class="sheet-conditions-box">
+			<span class="sheet-d6-icon">-A</span>
+			<textarea class="sheet-condition-desc" name="attr_condition3"></textarea>
+			<div class="sheet-recovery-3">
+            	<input type="radio" class="sheet-recovery-hex sheet-zero-recovery" name="attr_cond3-recovery" value="0" checked>
+				<input type="radio" class="sheet-recovery-hex sheet-one-recovery" name="attr_cond3-recovery" value="1">
+                <input type="radio" class="sheet-recovery-hex sheet-two-recovery" name="attr_cond3-recovery" value="2">
+
+                <span class="sheet-recovery-hex sheet-zero-recovery"><img class="sheet-recovery-3" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-01.png"></span>
+				<span class="sheet-recovery-hex sheet-one-recovery"><img class="sheet-recovery-3" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-02.png"></span>
+				<span class="sheet-recovery-hex sheet-two-recovery"><img class="sheet-recovery-3" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-03.png"></span>  
+			</div>
+			</div>
+			<div class="sheet-conditions-box">
+			<span class="sheet-edge-of-death">EDGE OF DEATH</span>
+			<textarea class="sheet-condition-desc" name="attr_condition4"></textarea>
+			<div class="sheet-recovery-4">
+            	<input type="radio" class="sheet-recovery-hex sheet-zero-recovery" name="attr_cond4-recovery" value="0" checked>
+				<input type="radio" class="sheet-recovery-hex sheet-one-recovery" name="attr_cond4-recovery" value="1">
+                <input type="radio" class="sheet-recovery-hex sheet-two-recovery" name="attr_cond4-recovery" value="2">
+
+                <span class="sheet-recovery-hex sheet-zero-recovery"><img class="sheet-recovery-4" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-01.png"></span>
+				<span class="sheet-recovery-hex sheet-one-recovery"><img class="sheet-recovery-4" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-02.png"></span>
+				<span class="sheet-recovery-hex sheet-two-recovery"><img class="sheet-recovery-4" src="https://raw.githubusercontent.com/haushalter/VigorRPG/master/Corruption/Corruption-Recover-2-03.png"></span>  
+			</div>
+			</div>
+		</div>
+	</div>
+</div> 
+</div>
+</div>
+<!--END LEFT COLUMN-->
+
+	<!----------------------------->
+	<!-- -->	
+	<!----------------------------->
+	<!----------------------------->
+	<!---->	
+	<!----------------------------->
+	
+<!--BEGIN RIGHT COLUMN-->	
+<div class="sheet-column-r"> 
+	<div class="sheet-flex-container sheet-flex-start">
+		
+		<!----------------------------->
+		<!-- VIGOR SECTION-->	
+		<!----------------------------->
+		<div class="sheet-vigor-box">
+		<div class="sheet-vigor-header">
+		<span>VIGOR</span>
+			<input class="sheet-vigor-numbers" name="attr_vigor-max" type="number" value="0">
+			<span class="sheet-vigor-number-label">MAX</span>
+			<input class="sheet-vigor-numbers" name="attr_vigor-current" type="number" value="0">
+			<span class="sheet-vigor-number-label">CURRENT</span>
+		</div>
+		</div>
+		
+		<!----------------------------->
+		<!-- QUALITIES SECTION-->	
+		<!----------------------------->
+		<div class="sheet-qualities-box">
+			<div class="sheet-qualities-header">
+			<span>QUALITIES</span>
+			</div>
+			<div class="sheet-qualities-rating-label">
+			<span>RATING</span>
+			</div>
+			<div class="sheet-qualities-line-holder">
+			<!--BRAWN-->
+			<div class="sheet-qualities-line">
+ 				<div class="sheet-qualities-rating-hex">
+                	<input type="checkbox" value="1" name="attr_brawn-1"><span></span>
+                	<input type="checkbox" value="1" name="attr_brawn-2"><span></span>
+                	<input type="checkbox" value="1" name="attr_brawn-3"><span></span>
+                	<input type="checkbox" value="1" name="attr_brawn-4"><span></span>
+					 <button type="roll" name="roll_brawn" class="sheet-quality-button" value="&{template:action_roll}{{name=@{character_name}}}{{quality=brawn}}{{?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}}}{{?{Target Number|6}}}{{action_dice=[[(2+(?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}) + @{brawn-1} + @{brawn-2} + @{brawn-3} + @{brawn-4})d6>?{Target Number|6}]]}}" title="Strength, Toughness, Grit, Gross Motor Skills, Sheer Frame">brawn</button>
+		    	</div>
+			</div>
+			<!--FINESSE-->
+			<div class="sheet-qualities-line">
+ 				<div class="sheet-qualities-rating-hex">
+                	<input type="checkbox" value="1" name="attr_finesse-1"><span></span>
+                	<input type="checkbox" value="1" name="attr_finesse-2"><span></span>
+                	<input type="checkbox" value="1" name="attr_finesse-3"><span></span>
+                	<input type="checkbox" value="1" name="attr_finesse-4"><span></span>
+ 					<button type="roll" name="roll_finesse" class="sheet-quality-button" value="&{template:action_roll}{{name=@{character_name}}}{{quality=finesse}}{{?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}}}{{?{Target Number|6}}}{{action_dice=[[(2+(?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}) + @{finesse-1} + @{finesse-2} + @{finesse-3} + @{finesse-4})d6>?{Target Number|6}]]}}" title="Grace, Litheness, Fine Motor Skills, Speed, Agility">finesse</button>		    	
+				</div>
+			</div>
+			<!--GUILE-->
+			<div class="sheet-qualities-line">
+ 				<div class="sheet-qualities-rating-hex">
+                	<input type="checkbox" value="1" name="attr_guile-1"><span></span>
+                	<input type="checkbox" value="1" name="attr_guile-2"><span></span>
+                	<input type="checkbox" value="1" name="attr_guile-3"><span></span>
+                	<input type="checkbox" value="1" name="attr_guile-4"><span></span>
+					<button type="roll" name="roll_guile" class="sheet-quality-button" value="&{template:action_roll}{{name=@{character_name}}}{{quality=guile}}{{?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}}}{{?{Target Number|6}}}{{action_dice=[[(2+(?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}) + @{guile-1} + @{guile-2} + @{guile-3} + @{guile-4})d6>?{Target Number|6}]]}}" title="Wit, Cleverness, Resourcefulness, Mischief, Sneakery">guile</button>
+		    	</div>
+			</div>
+			<!--PRESENCE-->
+			<div class="sheet-qualities-line">
+ 				<div class="sheet-qualities-rating-hex">
+                	<input type="checkbox" value="1" name="attr_presence-1"><span></span>
+                	<input type="checkbox" value="1" name="attr_presence-2"><span></span>
+                	<input type="checkbox" value="1" name="attr_presence-3"><span></span>
+                	<input type="checkbox" value="1" name="attr_presence-4"><span></span>
+					<button type="roll" name="roll_presence" class="sheet-quality-button" value="&{template:action_roll}{{name=@{character_name}}}{{quality=presence}}{{?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}}}{{?{Target Number|6}}}{{action_dice=[[(2+(?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}) + @{presence-1} + @{presence-2} + @{presence-3} + @{presence-4})d6>?{Target Number|6}]]}}" title="Composure, Authority, Personality, Performance">presence</button>
+		    	</div>
+			</div>
+			<!--UNDERSTANDING-->
+			<div class="sheet-qualities-line">
+ 				<div class="sheet-qualities-rating-hex">
+                	<input type="checkbox" value="1" name="attr_understanding-1"><span></span>
+                	<input type="checkbox" value="1" name="attr_understanding-2"><span></span>
+                	<input type="checkbox" value="1" name="attr_understanding-3"><span></span>
+                	<input type="checkbox" value="1" name="attr_understanding-4"><span></span>
+					<button type="roll" name="roll_understanding" class="sheet-quality-button" value="&{template:action_roll}{{name=@{character_name}}}{{quality=understanding}}{{?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}}}{{?{Target Number|6}}}{{action_dice=[[(2+(?{+/- Dice for Roleplay Prompts, Conditions, Momentum, etc|0}) + @{understanding-1} + @{understanding-2} + @{understanding-3} + @{understanding-4})d6>?{Target Number|6}]]}}" title="Interpretation, Appraisal, Knowledge, Discernment">understanding</button>
+		    	</div>
+			</div>
+			</div>
+		</div>
+		
+		<!----------------------------->
+		<!-- ASSETS SECTION-->	
+		<!----------------------------->
+		<div class="sheet-assets-holder">
+		<div class="sheet-assets-grid">
+			<div class="sheet-assets-header">ASSETS</div>
+			<!--PACK TYPE-->
+			<div class="sheet-pack-background"></div>
+			<div class="sheet-pack-header">PACK</div>
+			<div class="sheet-pack-type-bind">BIND
+				<div class="sheet-pack-type-hex-l">
+                	<input type="checkbox" value="1" name="attr_packtype-bind"><span></span>
+				</div>
+			</div>
+			<div class="sheet-pack-type-cuff">CUFF
+					<div class="sheet-pack-type-hex-l">
+                	<input type="checkbox" value="1" name="attr_packtype-cuff"><span></span>
+					</div>			
+			</div>
+			<div class="sheet-pack-type-fold">FOLD
+					<div class="sheet-pack-type-hex-l">
+                	<input type="checkbox" value="1" name="attr_packtype-fold"><span></span>
+					</div>				
+			</div>
+			<div class="sheet-pack-type-hook">HOOK
+					<div class="sheet-pack-type-hex-l">
+                	<input type="checkbox" value="1" name="attr_packtype-hook"><span></span>
+					</div>				
+			</div>
+			<div class="sheet-pack-type-point">
+					<div class="sheet-pack-type-hex-r">
+                	<input type="checkbox" value="1" name="attr_packtype-point"><span></span>
+					</div>	
+					<div class="sheet-pack-type-label-r">POINT</div>
+			</div>
+			<div class="sheet-pack-type-seam">
+					<div class="sheet-pack-type-hex-r">
+                	<input type="checkbox" value="1" name="attr_packtype-seam"><span></span>
+					</div>	
+					<div class="sheet-pack-type-label-r">SEAM</div>
+			</div>
+			<div class="sheet-pack-type-sift">
+					<div class="sheet-pack-type-hex-r">
+                	<input type="checkbox" value="1" name="attr_packtype-sift"><span></span>
+					</div>	
+					<div class="sheet-pack-type-label-r">SIFT</div>
+			</div>
+			
+			<!-- PACK HEXES -->
+			<div class="sheet-pack-hexes">
+				<input type="checkbox" value="1" name="attr_packhex-1"><span></span>
+               	<input type="checkbox" value="1" name="attr_packhex-2"><span></span>
+                <input type="checkbox" value="1" name="attr_packhex-3"><span></span>
+				<div class="sheet-heavy-hex-divider">|</div>
+				<input type="checkbox" value="1" name="attr_packhex-heavy1"><span></span>
+				<input type="checkbox" value="1" name="attr_packhex-heavy2"><span></span>
+			</div>
+			<div class="sheet-pack-heavy">HEAVY</div>
+			
+			<!-- ASSET TEXT AREAS-->
+			<div class="sheet-packed-assets">
+				<textarea name="attr_packed-assets" placeholder="Packed:"></textarea>
+			</div>
+			<div class="sheet-prized-assets">
+				<textarea name="attr_prized-assets" placeholder="Prized:"></textarea>
+			</div>
+		</div>
+
+		</div>
+		
+		<!----------------------------->
+		<!-- WAYPOINTS SECTION-->	
+		<!----------------------------->
+		<div class="sheet-waypoints-holder">
+			<div class="sheet-waypoints-header">
+			<span>WAYPOINTS</span>
+			</div>
+			
+			<!--REPEATING WAYPOINT FIELDSETS-->
+			<!--WAYPOINT 1-->
+			<div class="sheet-waypoint-one sheet-flex-rows">
+			<!--WAYPOINT DROPDOWN-->
+			<div class="sheet-waypoints-dropdown">
+			<select name="attr_waypoint-1">
+  			<option value="JOURNEY">JOURNEY</option>
+  			<option value="BIND">BIND</option>
+  			<option value="CUFF">CUFF</option>
+  			<option value="FOLD">FOLD</option>
+  			<option value="HOOK">HOOK</option>
+  			<option value="POINT">POINT</option>
+  			<option value="SEAM">SEAM</option>
+  			<option value="SIFT">SIFT</option>
+			</select>
+			</div>
+			<textarea class="sheet-waypoints-desc" placeholder="Waypoint Description" name="attr_waypoint-desc1"></textarea>
+			</div>
+
+		
+			<!--WAYPOINT 2-->
+			<div class="sheet-waypoint-one sheet-flex-rows">
+			<!--WAYPOINT DROPDOWN-->
+			<div class="sheet-waypoints-dropdown">
+			<select name="attr_waypoint-2">
+  			<option value="JOURNEY">JOURNEY</option>
+  			<option value="BIND">BIND</option>
+  			<option value="CUFF">CUFF</option>
+  			<option value="FOLD">FOLD</option>
+  			<option value="HOOK">HOOK</option>
+  			<option value="POINT">POINT</option>
+  			<option value="SEAM">SEAM</option>
+  			<option value="SIFT">SIFT</option>
+			</select>
+			</div>
+			<textarea class="sheet-waypoints-desc" placeholder="Waypoint Description" name="attr_waypoint-desc2"></textarea>
+			</div>
+			
+			
+			<fieldset class="repeating_waypoint">
+			<!--WAYPOINT 3-->
+			<div class="sheet-waypoint-one sheet-flex-rows">
+			<!--WAYPOINT DROPDOWN-->
+			<div class="sheet-waypoints-dropdown">
+			<select name="attr_waypoint-3">
+  			<option value="JOURNEY">JOURNEY</option>
+  			<option value="BIND">BIND</option>
+  			<option value="CUFF">CUFF</option>
+  			<option value="FOLD">FOLD</option>
+  			<option value="HOOK">HOOK</option>
+  			<option value="POINT">POINT</option>
+  			<option value="SEAM">SEAM</option>
+  			<option value="SIFT">SIFT</option>
+			</select>
+			</div>
+			<textarea class="sheet-waypoints-desc" placeholder="Waypoint Description" name="attr_waypoint-desc3"></textarea>
+			</div>
+			</fieldset>
+		</div>
+		
+		<!----------------------------->
+		<!--PERSONS/POINTS OF INTEREST-->	
+		<!----------------------------->
+		<div class="sheet-poi-holder">
+			<div class="sheet-poi-label">
+			<span>PERSONS/POINTS OF INTEREST</span>
+			</div>
+			<textarea class="sheet-poi-text" name="attr_poi"></textarea>
+		</div>
+		
+		</div> <!--END FLEX CONTAINER-->
+</div> <!--END RIGHT COLUMN-->
+
+	
+</div><!--END CHARACTER SHEET-->
+	
+
+<!----------------------------->
+<!--ROLL TEMPLATE-->	
+<!----------------------------->
+
+<!--ACTION ROLL-->
+<rolltemplate class="sheet-rolltemplate-action_roll">
+    <div class="sheet-roll-action-container">
+        <div class="sheet-roll-action-name">{{name}} rolls</div>
+        <div class="sheet-roll-action-quality">{{quality}}</div>
+        {{#rollBetween() action_dice -500 0}}<div class="sheet-roll-action-tos">No, and...</div>
+            <div class="sheet-roll-action-dice">{{action_dice}}<span class="sheet-roll-action-success">successes</span></div>
+            <div class="sheet-roll-action-subtitle">What does failure look like in this situation, and how do things get worse for you as a consequence?</div>{{/rollBetween() action_dice -500 0}}
+
+        {{#rollTotal() action_dice 1}}<div class="sheet-roll-action-tos">No, but...</div>
+            <div class="sheet-roll-action-dice">{{action_dice}}<span class="sheet-roll-action-success">success</span></div>
+            <div class="sheet-roll-action-subtitle">How do you fail in your action, but still get closer to your goal?</div>{{/rollTotal() action_dice 1}}
+        
+        {{#rollTotal() action_dice 2}}<div class="sheet-roll-action-tos">Yes, but...</div>
+            <div class="sheet-roll-action-dice">{{action_dice}}<span class="sheet-roll-action-success">successes</span></div>
+            <div class="sheet-roll-action-subtitle">How do you succeed, but with fallout, escalation, or diminished returns?</div>{{/rollTotal() action_dice 2}}
+        
+        {{#rollTotal() action_dice 3}}<div class="sheet-roll-action-tos">Yes</div>
+            <div class="sheet-roll-action-dice">{{action_dice}}<span class="sheet-roll-action-success">successes</span></div>
+            <div class="sheet-roll-action-subtitle">How do you pull off this action and move the plot forward?</div>{{/rollTotal() action_dice 3}}
+        
+        {{#rollBetween() action_dice 4 500}}<div class="sheet-roll-action-tos">Yes, and...</div>
+            <div class="sheet-roll-action-dice">{{action_dice}}<span class="sheet-roll-action-success">successes</span></div>
+            <div class="sheet-roll-action-subtitle">How does this action come off even better than you had hoped, with added benefits, insights, or flair?</div>{{/rollBetween() action_dice 4 500}}
+    </div>
+</rolltemplate>
+
+
+<!--CORRUPTION ROLL-->
+<rolltemplate class="sheet-rolltemplate-corruption_roll">
+    <div class="sheet-roll-corruption-container">
+        
+        <div class="sheet-roll-corruption-name">{{name}} faces</div>
+        
+        <div class="sheet-roll-corruption-title">THE CORRUPTION</div>
+        
+        <div class="sheet-roll-corruption-dice">
+        {{#rollGreater() corruption_dice1 0}}{{corruption_dice1}}<span class="sheet-comma">,</span>{{/rollGreater() corruption_dice1 0}}
+        {{#rollGreater() corruption_dice2 0}}{{corruption_dice2}}<span class="sheet-comma">,</span>{{/rollGreater() corruption_dice2 0}}
+        {{#rollGreater() corruption_dice3 0}}{{corruption_dice3}}<span class="sheet-comma">,</span>{{/rollGreater() corruption_dice3 0}}
+        {{#rollGreater() corruption_dice4 0}}{{corruption_dice4}}<span class="sheet-comma">,</span>{{/rollGreater() corruption_dice4 0}}
+        </div>
+        
+        <div class="sheet-roll-corruption-footer">
+            <div class="sheet-roll-corruption-steals">For each number above matching one rolled on your Action Roll, move that die from your roll to the Corruption Pool.</div>
+        </div>
+    </div>
+</rolltemplate>
+
+	
+</html>
